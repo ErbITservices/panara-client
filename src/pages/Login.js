@@ -23,7 +23,7 @@ const Container = styled.div`
 const Wrapper = styled.div`
     width: min(400px, 80%);
     padding: 40px 30px;
-    background-color: white;
+    background-color: transperent;
     display: flex;
     flex-direction: column;
     border-radius: 1vmax;
@@ -114,7 +114,7 @@ function Login(props) {
   return (
     <>
       <Navbar />
-      <Container style={{ backgroundImage: `url(${mainbackground})` }}>
+      <Containerb classname="backimg" style={{ backgroundImage: `url(${mainbackground})` }}>
         <Wrapper>
           <Title>Login</Title>
           <Form autoComplete="on">
@@ -143,7 +143,7 @@ function Login(props) {
             <Link to="/signup">Create New Account</Link>
           </HelpLink>
         </Wrapper>
-      </Container>
+      </Containerb>
     </>
   );
 }
