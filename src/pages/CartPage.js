@@ -399,25 +399,27 @@ console.log("Mihir1");
         }
           
         const options = {
-            key: key, //reciving key from backend for security purpose  
-            amount: order.ammount, 
-            currency: "INR",
-            name: `${user.firstName} ${user.lastName}'s Cart`,
-            description :  `${user.firstName} ${user.lastName}'s Cart includes total ${cartProductRes?.products?.length}`,
-            image: "https://toppng.com/uploads/preview/astronaut-art-png-jpg-royalty-free-stock-astronauta-dibujo-11562856188offwkk8qo8.png",
-            order_id: order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-            callback_url: "http://localhost:4000/api/buy/paymentVerify",  
-            prefill: {
-                name: `${user.firstName} ${user.lastName}`,
-                email: user.email,
-                contact: user.number
-            },
-            notes: {
-                address: "Razorpay Corporate Office"
-            },
-            theme: {
-                color: "#40a0a0"
-            }
+          key: key, //reciving key from backend for security purpose
+          amount: order.ammount,
+          currency: "INR",
+          name: `${user.firstName} ${user.lastName}'s Cart`,
+          description: `${user.firstName} ${user.lastName}'s Cart includes total ${cartProductRes?.products?.length}`,
+          image:
+            "https://toppng.com/uploads/preview/astronaut-art-png-jpg-royalty-free-stock-astronauta-dibujo-11562856188offwkk8qo8.png",
+          order_id: order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+          callback_url:
+            "https://panara-backend-1.onrender.com/api/buy/paymentVerify",
+          prefill: {
+            name: `${user.firstName} ${user.lastName}`,
+            email: user.email,
+            contact: user.number,
+          },
+          notes: {
+            address: "Razorpay Corporate Office",
+          },
+          theme: {
+            color: "#40a0a0",
+          },
         };      
         const rzp1 = new window.Razorpay(options);
         rzp1.open();       

@@ -368,25 +368,27 @@ function ProductPage(props) {
         }
         
         const options = {
-            key: Dbkey, //reciving key from backend sue to security 
-            amount: Dborder.amount, 
-            currency: "INR",
-            name: product.title,
-            description : `${product.desc.slice(0, 252)}...` || "random description", //slicing it because razor pay dosent allow desc length more then 255
-            image: product.img,
-            order_id: Dborder.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-            callback_url: "http://localhost:4000/api/buy/paymentVerify",
-            prefill: {
-                name: `${user.firstName} ${user.lastName}`,
-                email: user.email,
-                contact: user.number
-            },
-            notes: {
-                address: "Dummy Office address"
-            },
-            theme: {
-                color: "#40a0a0"
-            }
+          key: Dbkey, //reciving key from backend sue to security
+          amount: Dborder.amount,
+          currency: "INR",
+          name: product.title,
+          description:
+            `${product.desc.slice(0, 252)}...` || "random description", //slicing it because razor pay dosent allow desc length more then 255
+          image: product.img,
+          order_id: Dborder.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+          callback_url:
+            "https://panara-backend-1.onrender.com/api/buy/paymentVerify",
+          prefill: {
+            name: `${user.firstName} ${user.lastName}`,
+            email: user.email,
+            contact: user.number,
+          },
+          notes: {
+            address: "Dummy Office address",
+          },
+          theme: {
+            color: "#40a0a0",
+          },
         };      
         const rzp1 = new window.Razorpay(options);
         rzp1.open();       
