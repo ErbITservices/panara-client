@@ -4,6 +4,8 @@ import Navbar from '../components/Navbar'
 import { mobile } from '../Responsive'
 import { Link, useNavigate } from 'react-router-dom'
 import { login } from '../redux/apiCalls'
+
+import mainbackground from "../assets/download.jpg";
 import { useDispatch, useSelector } from 'react-redux'
 
 //import { resetError } from '../redux/userRedux'
@@ -14,11 +16,7 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(
-      rgba(255,255,255, 0.5),
-      rgba(255,255,255, 0.5)
-      ),
-      url("https://images.pexels.com/photos/131634/pexels-photo-131634.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    
     
     
 `
@@ -42,10 +40,16 @@ const Title = styled.h1`
   margin-bottom: 10px;
 `
 const Form = styled.form`
- // width: 100%;
+  // width: 100%;
   display: flex;
   flex-wrap: wrap;
-`
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(9.5px);
+  -webkit-backdrop-filter: blur(9.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+`;
 
 
 const Input = styled.input`
@@ -109,26 +113,39 @@ function Login(props) {
 
   return (
     <>
-    <Navbar/>
-    <Container>
+      <Navbar />
+      <Container style={{ backgroundImage: `url(${mainbackground})` }}>
         <Wrapper>
-            <Title>Login</Title>
-            <Form autoComplete='on'>
-                <Input type="email" placeholder='Email' onChange={(e)=> setEmail(e.target.value)}></Input>
-                <Input type="password" placeholder='Password' onChange={(e)=> setPassword(e.target.value)} autoComplete="off"></Input>
-                <HelpLink style={{marginLeft:"auto", marginRight:"0" }}><Link to="/forgotpassword">Forgot your password?</Link></HelpLink>
-                <Button onClick={submit} disabled={isFetching}>Login</Button>
-            </Form>
-            {isError && <Error>{isError.error}</Error>}
-            
-            
-            {/* <HelpLink><Link to="/forgotpassword">Do note remember your Password?</Link></HelpLink> */}
-            <HelpLink><Link to="/signup">Create New Account</Link></HelpLink>
+          <Title>Login</Title>
+          <Form autoComplete="on">
+            <Input
+              type="email"
+              placeholder="Email"
+              onChange={(e) => setEmail(e.target.value)}
+            ></Input>
+            <Input
+              type="password"
+              placeholder="Password"
+              onChange={(e) => setPassword(e.target.value)}
+              autoComplete="off"
+            ></Input>
+            <HelpLink style={{ marginLeft: "auto", marginRight: "0" }}>
+              <Link to="/forgotpassword">Forgot your password?</Link>
+            </HelpLink>
+            <Button onClick={submit} disabled={isFetching}>
+              Login
+            </Button>
+          </Form>
+          {isError && <Error>{isError.error}</Error>}
+
+          {/* <HelpLink><Link to="/forgotpassword">Do note remember your Password?</Link></HelpLink> */}
+          <HelpLink>
+            <Link to="/signup">Create New Account</Link>
+          </HelpLink>
         </Wrapper>
-    </Container>
-  
+      </Container>
     </>
-  )
+  );
 }
 
 export default Login
