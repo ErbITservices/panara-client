@@ -31,6 +31,11 @@ function Aboutus() {
                 Shop Now
               </button>
             </Link>
+            <Link to="/Services">
+              <button type="button" className="btn">
+                Services
+              </button>
+            </Link>
           </div>
           <div className="second-container">
             <div className="profile">
@@ -93,7 +98,6 @@ function Aboutus() {
             <li>
               <p>User friendly support</p>
             </li>
-            
           </ul>
         </div>
         <Footer />

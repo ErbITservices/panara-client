@@ -125,7 +125,7 @@ export const Categoris = [
   {
     id: 12,
     cat: "OTHER",
-    img: "https://png.pngtree.com/png-clipart/20190920/original/pngtree-technology-product-office-computer-png-image_4642139.jpg",
+    img: "https://assets.entrepreneur.com/content/3x2/2000/go-mobile-or-else.jpg",
     title: "Other",
   },
 ];
