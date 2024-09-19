@@ -114,7 +114,7 @@ function Login(props) {
   return (
     <>
       <Navbar />
-      <Containerb classname="backimg" style={{ backgroundImage: `url(${mainbackground})` }}>
+      <Container classname="backimg" style={{ backgroundImage: `url(${mainbackground})` }}>
         <Wrapper>
           <Title>Login</Title>
           <Form autoComplete="on">
@@ -143,7 +143,7 @@ function Login(props) {
             <Link to="/signup">Create New Account</Link>
           </HelpLink>
         </Wrapper>
-      </Containerb>
+      </Container>
     </>
   );
 }

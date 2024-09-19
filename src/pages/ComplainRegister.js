@@ -88,7 +88,7 @@ function ComplainRegister() {
           name: "",
         });
         setRenew(false)
-        setRenewcomplains(false)
+        setcomplainstaus(false)
         
       } catch (error) {
         setstatus("Sorry Try Again!");
@@ -161,8 +161,14 @@ function ComplainRegister() {
 
       if (b >= a) {
         console.log("hello");
+        
+        console.log("mihir " + complainstaus);
         setcheck("true");
+        
+        setcomplainstaus(true);
+        
         setstatus("Your Amc End-Date is " + res.data.enddate);
+        
       } else {
         setstatus("Sorry Your Amc is Expired Please Renew it Now");
         setRenew(true)
@@ -211,7 +217,7 @@ function ComplainRegister() {
               <div className="inputfield">
                 <button
                   type="button"
-                  onClick={() => { setRenewcomplains(true); setRenew(false)}}
+                  onClick={() => { setcomplainstaus(true); setRenew(false)}}
                   className="btn "
                 >
                   Continue
@@ -219,7 +225,7 @@ function ComplainRegister() {
               </div>
             </>
           )}
-          { Renewcomplains && (
+          { complainstaus && (
             <>
               <div className="inputfield">
                 <label>Enter Your Name </label>
@@ -261,7 +267,7 @@ function ComplainRegister() {
                   type="text"
                 />
               </div>
-              {Renew && (
+              
                 <div className="inputfield">
                   <label>Upload Photo Of Error </label>
                   <input
@@ -272,7 +278,7 @@ function ComplainRegister() {
                     type="file"
                   />
                 </div>
-              )}
+             
 
               <div className="inputfield">
                 <button type="button" onClick={handleSubmit} className="btn ">
