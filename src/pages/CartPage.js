@@ -7,7 +7,7 @@ import Footer from '../components/Footer'
 import { Add, ClearOutlined, Remove } from '@material-ui/icons'
 import { mobile } from '../Responsive'
 import  { useSelector, useDispatch } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { userRequest } from '../axiosReqMethods'
 import { deleteProduct } from '../redux/cartRedux'
 import addDynamicScript from '../helpers/addDynamicScript'
@@ -430,81 +430,115 @@ console.log("Mihir1");
 
   return (
     <Container>
-        <Announcments/>
-        <Navbar/>
-        <Wrapper>
-            <Title>Cart</Title>
-            {fetchCartLoading ? <Loading/> :
-            (cartProductRes?.products.length
-            ? <>
+      <Announcments />
+      <Navbar />
+      <Wrapper>
+        <Title>Cart</Title>
+        {fetchCartLoading ? (
+          <Loading />
+        ) : cartProductRes?.products.length ? (
+          <>
             <Top>
-                <TopButton >Continue Shopping</TopButton>
-                <TopTexts>
-                    <TopText>Shopping ba</TopText>
-                    <TopText>Your Wishlist</TopText>
-                </TopTexts>
-                <TopButton type="filled">CheckOut Now</TopButton>
+              <Link to="/Home"></Link> <TopButton>Continue Shopping</TopButton>
+              <TopTexts>
+                <TopText>Shopping ba</TopText>
+              </TopTexts>
+              <TopButton onClick={handleCheckout} type="filled">
+                CheckOut Now
+              </TopButton>
             </Top>
             <Bottom>
-                <Info>    
-                    {cartProductRes?.products?.map((product) => (
-                        <Product key={product.productID}>
-                            <DelButton onClick={() => handleDeleteProduct(product.productID)}>
-                                <ClearOutlined style={{fontSize: "40px" , color: "#AB2A28"}}/>
-                            </DelButton>
-                            <ProductDeteail onClick={() => navigate(`/product/${product._id}`)}>
-                                <Image src={product.img}/>
-                                <Details>
-                                    <ProductName><b>Product:</b> {product.title}</ProductName>
-                                    <ProductNumber><b>ID:</b> {product.productID}</ProductNumber>
-                                    <ProductColor color={product.color}/>
-                                    <ProductSize><b>Size:</b>  {product.size}</ProductSize>
-                                </Details>
-                            </ProductDeteail>
-                            <PriceDeteail>
-                                <ProductAmmountContainer>
-                                    <ValueARButton onClick={() => handleProductQuantityChange(product.productID, --product.quantity)}>
-                                        <Remove/>
-                                    </ValueARButton>
-                                    <ProductAmmount>{product.quantity}</ProductAmmount>
-                                    <ValueARButton onClick={() => handleProductQuantityChange(product.productID, ++product.quantity)}>
-                                        <Add/>
-                                    </ValueARButton>
-                                
-                                </ProductAmmountContainer>
-                                <ProductPrice>{product.price}</ProductPrice>
-                            </PriceDeteail>
-                        </Product>
-                    ))}
-                    <Hr/>
-                </Info>
-                <Summary>
-                    <SummaryTitle>Products</SummaryTitle>
-                        {cartProductRes?.products?.map((product) => (
-                            <SummaryItem key={product._id}>
-                                <SummaryText>{product.title}</SummaryText>
-                                <SummaryPrice>{(product.price * product.quantity)?.toFixed(2)}</SummaryPrice>
-                            </SummaryItem>
-                        ))}
-                        <SummaryItem type="total">
-                            <SummaryText >Total</SummaryText>
-                            <SummaryPrice>{totalCartPrice?.toFixed(2)}</SummaryPrice>
-                        </SummaryItem>
-                        <ButtonWrapper>
-                            <Button onClick={handleCheckout} disabled={isCheckoutLoading? true : false}>Check out</Button>
-                        </ButtonWrapper>    
-                </Summary>
-            
+              <Info>
+                {cartProductRes?.products?.map((product) => (
+                  <Product key={product.productID}>
+                    <DelButton
+                      onClick={() => handleDeleteProduct(product.productID)}
+                    >
+                      <ClearOutlined
+                        style={{ fontSize: "40px", color: "#AB2A28" }}
+                      />
+                    </DelButton>
+                    <ProductDeteail
+                      onClick={() => navigate(`/product/${product._id}`)}
+                    >
+                      <Image src={product.img} />
+                      <Details>
+                        <ProductName>
+                          <b>Product:</b> {product.title}
+                        </ProductName>
+                        <ProductNumber>
+                          <b>ID:</b> {product.productID}
+                        </ProductNumber>
+                        <ProductColor color={product.color} />
+                        <ProductSize>
+                          <b>Size:</b> {product.size}
+                        </ProductSize>
+                      </Details>
+                    </ProductDeteail>
+                    <PriceDeteail>
+                      <ProductAmmountContainer>
+                        <ValueARButton
+                          onClick={() =>
+                            handleProductQuantityChange(
+                              product.productID,
+                              --product.quantity
+                            )
+                          }
+                        >
+                          <Remove />
+                        </ValueARButton>
+                        <ProductAmmount>{product.quantity}</ProductAmmount>
+                        <ValueARButton
+                          onClick={() =>
+                            handleProductQuantityChange(
+                              product.productID,
+                              ++product.quantity
+                            )
+                          }
+                        >
+                          <Add />
+                        </ValueARButton>
+                      </ProductAmmountContainer>
+                      <ProductPrice>{product.price}</ProductPrice>
+                    </PriceDeteail>
+                  </Product>
+                ))}
+                <Hr />
+              </Info>
+              <Summary>
+                <SummaryTitle>Products</SummaryTitle>
+                {cartProductRes?.products?.map((product) => (
+                  <SummaryItem key={product._id}>
+                    <SummaryText>{product.title}</SummaryText>
+                    <SummaryPrice>
+                      {(product.price * product.quantity)?.toFixed(2)}
+                    </SummaryPrice>
+                  </SummaryItem>
+                ))}
+                <SummaryItem type="total">
+                  <SummaryText>Total</SummaryText>
+                  <SummaryPrice>{totalCartPrice?.toFixed(2)}</SummaryPrice>
+                </SummaryItem>
+                <ButtonWrapper>
+                  <Button
+                    onClick={handleCheckout}
+                    disabled={isCheckoutLoading ? true : false}
+                  >
+                    Check out
+                  </Button>
+                </ButtonWrapper>
+              </Summary>
             </Bottom>
-            </>
-            : <EmptyCartComponent/>)}
-            <GetUserAddress setModal={setaddmodalIsOpen} isOpen={addmodalisOpen} />
-        </Wrapper>
-        <NewsLetter/>
-        <Footer/>
-        
+          </>
+        ) : (
+          <EmptyCartComponent />
+        )}
+        <GetUserAddress setModal={setaddmodalIsOpen} isOpen={addmodalisOpen} />
+      </Wrapper>
+      <NewsLetter />
+      <Footer />
     </Container>
-  )
+  );
 }
 
 export default CartPage
