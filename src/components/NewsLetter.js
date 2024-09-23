@@ -59,15 +59,15 @@ const Button = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   border: none;
   flex: 1;
-  background-color: #6fc3c9;
+  background-color: rgb(124, 0, 170);
   color: black;
   cursor: pointer;
   &:hover {
     transform: scale(1);
-    background-color: #4d9296;
+    background-color: rgb(106, 0, 145);
   }
 `;
 

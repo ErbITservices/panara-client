@@ -16,7 +16,9 @@ function Aboutus() {
         <div className="main-container">
           <div className="info-container">
             {/* <h1>Abot Us</h1> */}
-            <h3>Success of your Business is Our First Prespictive</h3>
+            <h3>
+              <span>Success </span>of your Business is Our First Prespictive
+            </h3>
             <p>
               We are Panara Enterprise Pvt LTD and our company has successfully
               completed many projects with Our Government Of India and also we
@@ -47,21 +49,21 @@ function Aboutus() {
             <div className="experience-container">
               <div className="row1">
                 <div className="first">
-                  <h1>10+</h1>
+                  <h1>19+</h1>
                   <h3>Years of Experience</h3>
                 </div>
                 <div className="secound">
-                  <h1>500+</h1>
+                  <h1>450+</h1>
                   <h3>Project Completed</h3>
                 </div>
               </div>
               <div className="row2">
                 <div className="third">
-                  <h1>20+</h1>
+                  <h1>25+</h1>
                   <h3>Services Providing</h3>
                 </div>
                 <div className="fourth">
-                  <h1>1000+</h1>
+                  <h1>500+</h1>
                   <h3>Happy and Satisfied Customers</h3>
                 </div>
               </div>

@@ -3,6 +3,7 @@ import { Google } from '@mui/icons-material'
 import React from 'react'
 import styled from 'styled-components'
 import{mobile} from '../Responsive'
+import { Link } from 'react-router-dom'
 
 const Container = styled.div`
   display: flex;
@@ -143,16 +144,24 @@ function Footer() {
         <Center>
           <Title>Useful Links</Title>
           <List>
-            <ListItem>Mouse & Key Board</ListItem>
-            <ListItem>Printer Material</ListItem>
-            <ListItem>Scanner</ListItem>
-            <ListItem>Login</ListItem>
-            <ListItem>Sign up</ListItem>
-            <ListItem>Wish list</ListItem>
-            <ListItem>Cart</ListItem>
-            <ListItem>Categorys</ListItem>
-            <ListItem>Terms</ListItem>
-            <ListItem>My Account</ListItem>
+            <Link to={"/products/MOUSE&KEYBORD"}>
+              <ListItem>Mouse & Key Board</ListItem>
+            </Link>
+            <Link to={"/products/SCANNER"}>
+              <ListItem>Scanner</ListItem>
+            </Link>
+            <Link to={"/products/PRINTER_MATERIAL"}>
+              <ListItem>Printer Material</ListItem>
+            </Link>
+            <Link to={"/ComplainRegister"}>
+              <ListItem> Register Complain </ListItem>
+            </Link>
+            <Link to={"/login"}>
+              <ListItem> Login</ListItem>
+            </Link>
+            <Link to={"/signup"}>
+              <ListItem> Signup</ListItem>
+            </Link>
           </List>
         </Center>
         <Right>
@@ -171,15 +180,18 @@ function Footer() {
           </ContectItem>
           <ContectItem>
             <Call />
-            +91 8160628914
+            +91 9328938959
+          </ContectItem>
+          <ContectItem>
+            <Call />
+            +91 07949231201
           </ContectItem>
           <ContectItem>
             <Email /> patelmihir2712005@gmail.com
           </ContectItem>
         </Right>
       </Container>
-        <Branding>Powered by ERBIT SERVICES </Branding>
-      
+      <Branding>Powered by ERBIT SERVICES </Branding>
     </Contain>
   );
 }

@@ -1,4 +1,13 @@
- 
+ @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+ *{
+     font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+ }
  .container {
     /* width: 1250px; */
     max-width: 100%;
@@ -9,10 +18,19 @@
      background-size: cover;
 }
 .highlight{
-    font-weight: 1000;
+    font-weight: 300;
     font-size: 20px;
     margin: 0px 10px;
     color: rgb(106, 0, 145);
+    
+}
+.highlight:hover{
+    transition: all ease 0.3s;
+    font-weight: 300;
+    font-size: 20px;
+    margin: 0px 10px;
+    color: rgb(74, 0, 101);
+    text-shadow: 0 0 10px rgb(106, 0, 145);
 }
 .backimg{
     background-size: cover;
@@ -59,11 +77,19 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     display: inline-block;
 }
 
+
 .info-container h3{
     font-size: 50px;
     margin-bottom: 50px;
-    font-weight: 800;
+    font-weight: 700;
     padding: 30px 0px;
+}
+.info-container h3 span{
+    font-size: 50px;
+    margin-bottom: 50px;
+    font-weight: 700;
+    padding: 30px 0px;
+    color: rgb(125, 0, 171);
 }
 .info-container p{
     font-size: 20px;
@@ -128,6 +154,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );}
     display: inline-block;
     padding: 5px;
 }
+
 .secound{
     height: 90%;
     width: 50%;
@@ -155,6 +182,10 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );}
     text-align: center;
     padding: 5px;
 }
+.first:hover , .secound:hover , .third:hover ,.fourth:hover {
+    transition: all ease 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.649);
+}
 .experience-container h1{
     padding: 0px 15px;
     font-size: 45px;
@@ -162,7 +193,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );}
     
 }
 .experience-container h3{
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .btn{
@@ -173,7 +204,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );}
     padding: 8px 20px;
     font-size: 20px;
     margin: 30px 10px;
-    font-weight: 1000;
+    font-weight: 500;
     border: 1px solid rgb(10, 10, 10);
       background: rgba( 255, 255, 255, 0.2 );
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -210,7 +241,8 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 
 .service-item {
     padding: 10px;
-    height: 30vh;
+    height: 35vh;
+    max-width: 600px;
   max-width: 29%;
   align-items: center;
   display: inline-block;
@@ -239,7 +271,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 .service-item h1 {
   font-size: 25px;
-  font-weight: 1000;
+  font-weight: 500;
   text-align: center;
   margin-bottom: 10px;
   padding-top: 10px;
@@ -294,7 +326,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 
 .chooseus-containe{
     height: 100%;
-    width: 100%;
+    width: 97%;
     margin: 10px;
     padding: 10px;
     background: rgba( 255, 255, 255, 0.2 );
@@ -328,14 +360,19 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
         padding: 10px ;
         margin: 10px;
     }
+    .inputfield{
+        
+        padding: 10px ;
+        margin: 5px;
+    }
     .service-item {
         flex: 0 0 100%;
     }
     .service-item:hover {
   transition: ease all 0.5s;
-  max-width: 100%;
+  max-width: 29%;
   box-shadow: 0 8px 32px 0 rgb(32, 35, 69);
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
      .main-container{
        
@@ -355,13 +392,19 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     }
     .service-item:hover {
   transition: ease all 0.5s;
-  max-width: 100%;
+  max-width: 46%;
   box-shadow: 0 8px 32px 0 rgb(32, 35, 69);
   transform: scale(1.05);
 }
+    .inputfield{
+         height: 100%;
+        padding: 10px ;
+        margin: 5px;
+    }
     .service-item {
         flex: 0 0 100%;
-        max-width: 100%;
+        max-width: 45%;
+        height: 38vh;
     }
     .info-container h3{
         padding: 0 0;
@@ -408,5 +451,19 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 flex: 0 0 100%;
     max-width: 100%;
     width: 100%;
+    }
+}
+
+@media (max-width: 390px){
+.service-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+        height: 39vh;
+    }
+.service-item:hover {
+         transition: ease all 0.5s;
+  max-width: 100%;
+  box-shadow: 0 8px 32px 0 rgb(32, 35, 69);
+  transform: scale(1.05);
     }
 }
