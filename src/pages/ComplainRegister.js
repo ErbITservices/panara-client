@@ -29,21 +29,20 @@ function ComplainRegister() {
   const [status, setstatus] = useState("");
   const [complains, setcomplains] = useState(null);
   const [complainstaus, setcomplainstaus] = useState(false);
-  
 
   const [library, setlibrary] = useState({
     lname: "",
     service: "",
     problemstatement: "",
     img: "",
-      mobilenumber: "",
-    email:"",
+    mobilenumber: "",
+    email: "",
     name: "",
-    status:"pending"
+    status: "pending",
   });
-    const [check, setcheck] = useState("false");
-    const [Renew, setRenew] = useState(false);
-    const [Renewcomplains, setRenewcomplains] = useState(false);
+  const [check, setcheck] = useState("false");
+  const [Renew, setRenew] = useState(false);
+  const [Renewcomplains, setRenewcomplains] = useState(false);
 
   const handleInput = (e) => {
     const name = e.target.name;
@@ -58,9 +57,9 @@ function ComplainRegister() {
       const filereader = new FileReader();
       filereader.readAsDataURL(file);
       filereader.onload = () => {
-        console.log("image changed on " )
+        console.log("image changed on ");
         setlibrary((p) => ({ ...p, img: filereader.result }));
-      }
+      };
     }
     console.log(library);
   };
@@ -87,56 +86,53 @@ function ComplainRegister() {
           email: "",
           name: "",
         });
-        setRenew(false)
-        setcomplainstaus(false)
-        
+        setRenew(false);
+        setcomplainstaus(false);
+      } catch (error) {
+        setstatus("Sorry Try Again!");
+        console.log(error);
+      }
+    } else {
+      try {
+        console.log("mihir1");
+        const res = await userRequest.post("/api/complain", {
+          library,
+        });
+        // setcheck("true")
+        console.log("done");
+        setstatus("Complain Submited");
+        setcheck("false");
+        setlibrary({
+          lname: "",
+          service: "",
+          problemstatement: "",
+          img: "",
+          mobilenumber: "",
+          email: "",
+          name: "",
+        });
       } catch (error) {
         setstatus("Sorry Try Again!");
         console.log(error);
       }
     }
-    else{try {
-      console.log("mihir1");
-      const res = await userRequest.post("/api/complain", {
-        library,
-      });
-      // setcheck("true")
-      console.log("done");
-      setstatus("Complain Submited");
-      setcheck("false");
-      setlibrary({
-        lname: "",
-        service: "",
-        problemstatement: "",
-        img: "",
-        mobilenumber: "",
-        email: "",
-        name: "",
-      });
-    } catch (error) {
-      setstatus("Sorry Try Again!");
-      console.log(error);
-    }}
-    
   };
   const handlecheck = async () => {
     console.log(library);
     const allcomplain = await userRequest.get(`/api/complain/${library.lname}`);
     setcomplains(allcomplain.data);
-    
+
     console.log(complains);
 
     if (complains) {
       setcomplainstaus(true);
     }
-    
-    
-  
+
     try {
       console.log("mihir1");
       const res = await userRequest.get(`/api/ticket/${library.lname}`);
       console.log(res.data.enddate);
-      
+
       // Date object
       const date = new Date();
 
@@ -161,25 +157,22 @@ function ComplainRegister() {
 
       if (b >= a) {
         console.log("hello");
-        
+
         console.log("mihir " + complainstaus);
         setcheck("true");
-        
+
         setcomplainstaus(true);
-        
+
         setstatus("Your Amc End-Date is " + res.data.enddate);
-        
       } else {
         setstatus("Sorry Your Amc is Expired Please Renew it Now");
-        setRenew(true)
-        setcheck( "true")
+        setRenew(true);
+        setcheck("true");
       }
       // setcheck("true")
     } catch (error) {
       console.log(error);
     }
-  
-    
   };
   return (
     <>
@@ -211,13 +204,16 @@ function ComplainRegister() {
               type="text"
             />
           </div>
-          {Renew  && (
+          {Renew && (
             <>
               <h3>You Want Paid Visit</h3>
               <div className="inputfield">
                 <button
                   type="button"
-                  onClick={() => { setcomplainstaus(true); setRenew(false)}}
+                  onClick={() => {
+                    setcomplainstaus(true);
+                    setRenew(false);
+                  }}
                   className="btn "
                 >
                   Continue
@@ -225,7 +221,7 @@ function ComplainRegister() {
               </div>
             </>
           )}
-          { complainstaus && (
+          {complainstaus && (
             <>
               <div className="inputfield">
                 <label>Enter Your Name </label>
@@ -267,18 +263,17 @@ function ComplainRegister() {
                   type="text"
                 />
               </div>
-              
-                <div className="inputfield">
-                  <label>Upload Photo Of Error </label>
-                  <input
-                    accept="image/jpeg, image/png"
-                    name="image"
-                    onChange={handleInput}
-                    value={library.img}
-                    type="file"
-                  />
-                </div>
-             
+
+              <div className="inputfield">
+                <label>Upload Photo Of Error </label>
+                <input
+                  accept="image/jpeg, image/png"
+                  name="image"
+                  onChange={handleInput}
+                  value={library.img}
+                  type="file"
+                />
+              </div>
 
               <div className="inputfield">
                 <button type="button" onClick={handleSubmit} className="btn ">
@@ -288,7 +283,7 @@ function ComplainRegister() {
             </>
           )}
 
-          {  (check === "false") &&  (
+          {check === "false" && (
             <div className="inputfield">
               <button type="button" onClick={handlecheck} className="btn ">
                 Check

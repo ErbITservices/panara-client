@@ -392,8 +392,7 @@ function CartPage(props) {
       image:
         "https://toppng.com/uploads/preview/astronaut-art-png-jpg-royalty-free-stock-astronauta-dibujo-11562856188offwkk8qo8.png",
       order_id: order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-      callback_url:
-        "https://panara-backend-1.onrender.com/api/buy/paymentVerify",
+      callback_url: "https://panara-backend.vercel.app/api/buy/paymentVerify",
       prefill: {
         name: `${user.firstName} ${user.lastName}`,
         email: user.email,
