@@ -185,7 +185,7 @@ function Aboutus() {
             </ul>
           </div>
         </section>
-          <Certificateslider/>
+        <Certificateslider />
         <Footer />
       </div>
     </>

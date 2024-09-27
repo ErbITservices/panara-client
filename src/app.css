@@ -32,7 +32,8 @@
   text-shadow: 0 0 10px rgb(106, 0, 145);
 }
 .backimg {
-  background-size: cover;
+  background-size: contain;
+  
 }
 .warnings {
   color: darkblue;
@@ -81,7 +82,7 @@
   margin-bottom: 50px;
   font-weight: 700;
   padding: 30px 0px;
-  animation: appear 0.5s linear;
+  animation: appear 1s linear;
 }
 .info-container h3 span {
   font-size: 50px;
@@ -92,13 +93,13 @@
 }
 .info-container p {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.3;
   text-align: left;
   padding: 0px 50px;
   word-spacing: 5px;
-  animation: appear 0.5s linear;
-  transition: all ease 0.3s;
+  animation: appear 1s linear;
+  transition: all ease 1s;
 }
 
 .image {
@@ -109,7 +110,7 @@
   background-repeat: no-repeat;
   border-radius: 10px;
 
-  animation: appear2 0.3s linear;
+  animation: appear2 0.5s linear;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
 }
@@ -159,7 +160,7 @@
   display: inline-block;
   padding: 5px;
 
-  animation: appear2 0.3s linear;
+  animation: appear2 1s linear;
 }
 
 .secound {
@@ -171,7 +172,7 @@
   text-align: center;
   padding: 5px;
 
-  animation: appear2 0.3s linear;
+  animation: appear2 1s linear;
 }
 .third {
   height: 90%;
@@ -182,7 +183,7 @@
   text-align: center;
   padding: 5px;
 
-  animation: appear2 0.3s linear;
+  animation: appear2 1s linear;
 }
 .fourth {
   height: 90%;
@@ -193,7 +194,7 @@
   text-align: center;
   padding: 5px;
 
-  animation: appear2 0.3s linear;
+  animation: appear2 1s linear;
 }
 .first:hover,
 .secound:hover,
@@ -223,12 +224,13 @@
   border: 1px solid rgb(10, 10, 10);
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  animation: appear2 0.5s linear;
+  animation: appear2 1s linear;
 }
 .btn:hover {
   transition: ease all 0.5s;
   background-color: black;
   color: #fff;
+  box-shadow: 0 8px 32px 0 rgba(35, 42, 139, 0.50);
 }
 
 /* sevices */
@@ -270,7 +272,7 @@
   overflow: hidden;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 
-  animation: appear2 0.3s linear;
+  animation: appear2 1s linear;
 
 }
 
@@ -368,15 +370,19 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 .cursor {
-  transition: all ease 0.3s;
+  transition: all ease 0.1s;
   height: 20px;
   width: 20px;
   background-color: rgb(255, 255, 255);
-  position: absolute;
+  position:absolute;
   border-radius: 50%;
   z-index: 9999;
   pointer-events: none;
   mix-blend-mode: difference;
+}
+.chooseus-containe:hover ~ .cursor{
+  transform: scale(10);
+  display: none;
 }
 
 
@@ -438,9 +444,7 @@ background: rgb(255, 68, 68) !important;
 }
 
 @media (max-width: 1450px) {
-  .cursor {
-    display: none;
-  }
+  
   .experience-container h1 {
     text-align: center;
     font-size: 40px;
