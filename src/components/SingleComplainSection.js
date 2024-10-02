@@ -20,7 +20,7 @@ const Top = styled.div`
 `;
 const OrderID = styled.span`
   padding: 5px 10px;
-  background-color: teal;
+  background-color: rgb(125, 0, 171);
   color: white;
   border-radius: 1vmax;
 `;
@@ -72,7 +72,7 @@ const PmicroInfo = styled.div`
   }
 `;
 const Qty = styled.div`
-  border-right: solid 1px teal;
+  border-right: solid 1px rgb(125, 0, 171);
   padding-right: 5px;
   @media screen and (max-width: 850px) {
     //magic nubers
@@ -81,7 +81,7 @@ const Qty = styled.div`
   }
 `;
 const Size = styled.div`
-  border-right: solid 1px teal;
+  border-right: solid 1px rgb(125, 0, 171);
   padding-right: 5px;
   @media screen and (max-width: 850px) {
     //magic nubers

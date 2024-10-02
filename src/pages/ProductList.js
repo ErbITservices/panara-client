@@ -1,15 +1,14 @@
-import React, {useEffect, useState} from 'react'
-import Announcments from '../components/Announcments'
-import Navbar from '../components/Navbar'
-import styled from 'styled-components'
-import Product from '../components/Product'
-import NewsLetter from '../components/NewsLetter'
-import Footer from '../components/Footer'
-import { useLocation } from 'react-router-dom'
-import { mobile } from '../Responsive'
+import React, { useEffect, useState } from "react";
+import Announcments from "../components/Announcments";
+import Navbar from "../components/Navbar";
+import styled from "styled-components";
+import Product from "../components/Product";
+import NewsLetter from "../components/NewsLetter";
+import Footer from "../components/Footer";
+import { useLocation } from "react-router-dom";
+import { mobile } from "../Responsive";
 
 import mainbackground from "../assets/download.jpg";
-
 
 const Container = styled.div`
   scroll-behavior: smooth;
@@ -18,63 +17,58 @@ const Container = styled.div`
   background-size: cover;
 `;
 const Title = styled.h1`
-    margin: 20px 20px;
-`
+  margin: 20px 20px;
+`;
 const FilterContainer = styled.div`
-    margin: 20px;
-    display: flex;
-    justify-content: space-between;
-`
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+`;
 const Filter = styled.div`
-    font-size: 20px;
-    font-weight: 600;
-`
+  font-size: 20px;
+  font-weight: 600;
+`;
 const FilterText = styled.span`
-    margin-right: 20px;
-`
+  margin-right: 20px;
+`;
 const Select = styled.select`
-    padding: 10px;
-    font-size: 15px;
-    margin-right: 10px;
-    
-    &:hover {
-        box-shadow: 3px 3px 2px -1px rgba(0,0,0,.2);
-    }
-    ${mobile({
-        marginTop: "5px",
-        width: "70%",
-        marginLeft: "2px",
-    })}
-`
-const Options = styled.option`
+  padding: 10px;
+  font-size: 15px;
+  margin-right: 10px;
 
-`
+  &:hover {
+    box-shadow: 3px 3px 2px -1px rgba(0, 0, 0, 0.2);
+  }
+  ${mobile({
+    marginTop: "5px",
+    width: "70%",
+    marginLeft: "2px",
+  })}
+`;
+const Options = styled.option``;
 
 function ProductList(props) {
+  const location = useLocation();
+  let cat = location.pathname.split("/")[2];
 
-    const location = useLocation();
-    let cat = location.pathname.split("/")[2];
+  if (cat === "all") cat = null;
 
-    if(cat === "all") cat = null;
+  //filters logic
+  const [filter, setFilter] = useState({});
+  const handleFiters = (e) => {
+    const value = e.target.value;
+    setFilter({
+      ...filter,
+      [e.target.name]: value,
+    });
+  };
+  //Sprting
+  const [sort, setSort] = useState("Newest");
 
-
-    //filters logic
-    const [filter, setFilter] = useState({});
-    const handleFiters = (e) => {
-        const value = e.target.value;       
-        setFilter({
-            ...filter,
-            [e.target.name]: value,
-        })  
-        
-    }
-    //Sprting
-    const [sort, setSort] = useState("Newest");
-    
-    //to change title as soon as component mounts
-    useEffect(() => {
-        document.title = `PanaraIt - ${props.title}`
-      }, []) // eslint-disable-line react-hooks/exhaustive-deps
+  //to change title as soon as component mounts
+  useEffect(() => {
+    document.title = `PanaraIt - ${props.title}`;
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <Container style={{ backgroundImage: `url(${mainbackground})` }}>
@@ -115,11 +109,11 @@ function ProductList(props) {
           </Select>
         </Filter>
       </FilterContainer>
-      <Product  cat={cat} filter={filter} sort={sort} />
+      <Product cat={cat} filter={filter} sort={sort} />
       <NewsLetter />
       <Footer />
     </Container>
   );
 }
 
-export default ProductList
+export default ProductList;

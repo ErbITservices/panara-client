@@ -1,6 +1,12 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import mainbackground from "../assets/download.jpg";
+import LaptopChromebookRoundedIcon from "@mui/icons-material/LaptopChromebookRounded";
+import DeveloperModeRoundedIcon from "@mui/icons-material/DeveloperModeRounded";
+import TextSnippetRoundedIcon from "@mui/icons-material/TextSnippetRounded";
+import DocumentScannerRoundedIcon from "@mui/icons-material/DocumentScannerRounded";
+import EngineeringRoundedIcon from "@mui/icons-material/EngineeringRounded";
+import TipsAndUpdatesRoundedIcon from "@mui/icons-material/TipsAndUpdatesRounded";
 import background from "../assets/IMG_7600.PNG";
 import React from "react";
 
@@ -12,10 +18,12 @@ function Services() {
         style={{ backgroundImage: `url(${mainbackground})` }}
       >
         <Navbar />
-              <div className="service-container">
-                  <h3>Our Services</h3>
+        <div className="service-container">
+          <h3>Our Services</h3>
           <div className="service-item">
-            <h1>Website Design and Development</h1>
+            <h1>
+              <LaptopChromebookRoundedIcon /> Website Design and Development
+            </h1>
             <p>
               Our website developers provide expert web application development
               and web design services to our clients. Appnovation offers a
@@ -26,7 +34,9 @@ function Services() {
             </p>
           </div>
           <div className="service-item">
-            <h1>Mobile Application Development</h1>
+            <h1>
+              <DeveloperModeRoundedIcon /> Mobile Application Development
+            </h1>
             <p>
               Whether looking to create a mobile application for smartphones,
               tablets or both, Appnovation has your organization covered no
@@ -37,7 +47,9 @@ function Services() {
             </p>
           </div>
           <div className="service-item">
-            <h1>Data Entry Services</h1>
+            <h1>
+              <TextSnippetRoundedIcon /> Data Entry Services
+            </h1>
             <p>
               Data Entry Service based in India offers a wide range of back
               office and Information Technology Enabled Services namely data
@@ -49,7 +61,10 @@ function Services() {
             </p>
           </div>
           <div className="service-item">
-            <h1>Document Scanning</h1>
+            <h1>
+              <DocumentScannerRoundedIcon />
+              Document Scanning
+            </h1>
             <p>
               Document scanning is the practice of using scanners to convert
               paper documents into digital images. More businesses are scanning
@@ -60,7 +75,9 @@ function Services() {
             </p>
           </div>
           <div className="service-item">
-            <h1>Annual Maintenance Contract</h1>
+            <h1>
+              <EngineeringRoundedIcon /> Annual Maintenance Contract
+            </h1>
             <p>
               Annual maintenance services can apply to buildings, landscaping,
               computers, machinery, technically-enhanced furniture, and any
@@ -70,7 +87,10 @@ function Services() {
             </p>
           </div>
           <div className="service-item">
-            <h1>Library Automation</h1>
+            <h1>
+              <TipsAndUpdatesRoundedIcon />
+              Library Automation
+            </h1>
             <p>
               In library, automation we can store all information consists of
               book numbers, author name, rack detail, book titles and much more.

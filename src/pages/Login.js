@@ -1,44 +1,39 @@
-import React, {useEffect, useState} from 'react'
-import styled from 'styled-components'
-import Navbar from '../components/Navbar'
-import { mobile } from '../Responsive'
-import { Link, useNavigate } from 'react-router-dom'
-import { login } from '../redux/apiCalls'
+import React, { useEffect, useState } from "react";
+import styled from "styled-components";
+import Navbar from "../components/Navbar";
+import { mobile } from "../Responsive";
+import { Link, useNavigate } from "react-router-dom";
+import { login } from "../redux/apiCalls";
 
 import mainbackground from "../assets/download.jpg";
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch, useSelector } from "react-redux";
 
 //import { resetError } from '../redux/userRedux'
 
 const Container = styled.div`
-    width: 100vw;
-    height: calc(100vh - 58px); //60px of navbar
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    
-    
-`
+  width: 100vw;
+  height: calc(100vh - 58px); //60px of navbar
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 const Wrapper = styled.div`
-    width: min(400px, 80%);
-    padding: 40px 30px;
-    background-color: transperent;
-    display: flex;
-    flex-direction: column;
-    border-radius: 1vmax;
-    box-shadow: 20px 20px 50px grey;
-    ${mobile({
-      padding: "20px 15px"
-    })}
-    
-    
-`
+  width: min(400px, 80%);
+  padding: 40px 30px;
+  background-color: transperent;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1vmax;
+  box-shadow: 20px 20px 50px grey;
+  ${mobile({
+    padding: "20px 15px",
+  })}
+`;
 const Title = styled.h1`
   font-size: 24px;
   font-weight: 300;
   margin-bottom: 10px;
-`
+`;
 const Form = styled.form`
   // width: 100%;
   display: flex;
@@ -51,7 +46,6 @@ const Form = styled.form`
   border: 1px solid rgba(255, 255, 255, 0.18);
 `;
 
-
 const Input = styled.input`
   min-width: 80%;
   padding: 10px;
@@ -63,58 +57,59 @@ const Input = styled.input`
   ${mobile({
     margin: "15px 0px",
   })}
-`
-
+`;
 
 const Button = styled.button`
   margin: 10px 0px;
   width: 40%;
   border: none;
-  background-color: teal;;
+  background-color: rgb(125, 0, 171);
   padding: 15px 20px;
-  background-color: teal;
+  background-color: rgb(125, 0, 171);
   color: white;
   border-radius: 1vmin;
-  margin-right: 60% ;
-  &:disabled{
+  margin-right: 60%;
+  &:disabled {
     color: green;
     background-color: #e1e6ed;
     cursor: not-allowed;
   }
-`
+`;
 const HelpLink = styled.a`
-    margin: 5px 0px; 
-`
+  margin: 5px 0px;
+`;
 const Error = styled.span`
-    color: red;
-`
-
+  color: red;
+`;
 
 function Login(props) {
-
   //to change title as soon as component mounts
   useEffect(() => {
-    document.title = `Panara - ${props.title}`
-  }, []) // eslint-disable-line react-hooks/exhaustive-deps
+    document.title = `Panara - ${props.title}`;
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { isFetching, isError, currentUser} = useSelector(state => state.user)
+  const { isFetching, isError, currentUser } = useSelector(
+    (state) => state.user
+  );
   const navigator = useNavigate();
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const submit = async (e) => {
-    
     e.preventDefault();
-    login( dispatch ,{ email , password})
-    if (login( dispatch ,{ email , password})) {
+    login(dispatch, { email, password });
+    if (login(dispatch, { email, password })) {
       navigator("/");
     }
-  }
+  };
 
   return (
     <>
       <Navbar />
-      <Container classname="backimg" style={{ backgroundImage: `url(${mainbackground})` }}>
+      <Container
+        classname="backimg"
+        style={{ backgroundImage: `url(${mainbackground})` }}
+      >
         <Wrapper>
           <Title>Login</Title>
           <Form autoComplete="on">
@@ -148,4 +143,4 @@ function Login(props) {
   );
 }
 
-export default Login
+export default Login;

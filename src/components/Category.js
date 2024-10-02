@@ -9,6 +9,7 @@ const Container = styled.div`
     max-width: 100%;
     margin: auto;
     margin-bottom: 60px;
+    text-align: center;
 `
 
 const Title = styled.div`

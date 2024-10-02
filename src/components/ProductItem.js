@@ -1,17 +1,19 @@
-import { FavoriteBorderOutlined, SearchOutlined, ShoppingCartOutlined } from '@material-ui/icons'
-import React from 'react'
-import styled from 'styled-components'
-import { Link } from 'react-router-dom';
-import StarIcon from '@mui/icons-material/Star';
-
+import {
+  FavoriteBorderOutlined,
+  SearchOutlined,
+  ShoppingCartOutlined,
+} from "@material-ui/icons";
+import React from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import StarIcon from "@mui/icons-material/Star";
 
 const Wrapper = styled.div`
   display: flex;
   position: relative; //becaus of retinsContainer
-`
+`;
 const Info = styled.div`
-  padding: 10px; 
-
+  padding: 10px;
 `;
 
 const Title = styled.h3`
@@ -19,10 +21,10 @@ const Title = styled.h3`
   overflow: hidden;
   white-space: nowrap;
   padding-bottom: 2px;
-  ${Info}:hover{
+  ${Info}:hover {
     display: none;
   }
-`
+`;
 
 const Description = styled.h4`
   text-overflow: ellipsis;
@@ -30,7 +32,7 @@ const Description = styled.h4`
   white-space: nowrap;
   font-weight: 400;
   padding-bottom: 5px;
-`
+`;
 const WishList = styled.button`
   width: 100%;
   margin: auto;
@@ -38,27 +40,27 @@ const WishList = styled.button`
   cursor: pointer;
   border: none;
   box-shadow: 0px 0px 1px #888888;
-  display: none;  
+  display: none;
   transition: all 0.3s ease-in-out;
 
   :hover {
     color: white;
-    background-color: teal;
+    background-color: rgb(125, 0, 171);
     border-radius: 0.5vmin;
     box-shadow: 0px 0px 3px #888888;
   }
-  `
+`;
 
 const WishlistWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5px;
-`
+`;
 
 const Price = styled.span`
   font-weight: 600;
-`
+`;
 
 const Image = styled.img`
   width: 100%;
@@ -71,8 +73,8 @@ const RatingsContainer = styled.div`
   position: absolute;
   bottom: 5px;
   left: 10px;
-  background-color: rgba(235,240,245, 0.9);
-  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  background-color: rgba(235, 240, 245, 0.9);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
   display: flex;
   align-items: center;
   padding: 0px 5px;
@@ -89,17 +91,15 @@ const RatingCount = styled.div`
 `;
 
 const Container = styled.div`
-  
   width: 210px;
   height: 360px;
   background-color: #fcfcfc;
   margin-bottom: 10px;
   transition: all 0.3s ease-in-out;
   overflow: hidden;
-  
 
   @media only screen and (min-width: 500px) {
-    :hover{
+    :hover {
       box-shadow: 0px 0px 15px #888888;
       transform: translateY(-5px);
     }
@@ -110,7 +110,7 @@ const Container = styled.div`
     :hover ${Description} {
       display: none;
     }
-    :hover ${WishList}{
+    :hover ${WishList} {
       display: block;
     }
   }
@@ -121,48 +121,49 @@ const Container = styled.div`
   }
 `;
 
-
 const link = {
-  
   textDecoration: "none",
-}
-
+};
 
 function ProductItem(data) {
-
-  const { img, title, _id, desc, price, ratingsAverage, ratingsQuantity} = data.data;
+  const { img, title, _id, desc, price, ratingsAverage, ratingsQuantity } =
+    data.data;
 
   return (
-    
-      <Container >
-        <Link style={link}  to={`/product/${_id}`}>
-          <Wrapper>
-            <Image src={img} /> 
-            {ratingsQuantity ? 
-              (<RatingsContainer>
-                  <Rating>{ratingsAverage} <StarIcon style={{color: "teal", fontSize: "20px"}} /></Rating>
-                  <div style={{borderLeft: "1px solid green", height: "15px"}}></div>
-                  <RatingCount>
-                    {ratingsQuantity}
-                  </RatingCount>
-              </RatingsContainer>)
-            : null}
-          </Wrapper>
-        </Link>
-        <Info>
-          <Title>{title}</Title>
-          {/* <Description>{desc?.length > 25 ? `${desc?.slice(0,24)}...` : desc}</Description> */}
-          <Description>{desc ? desc : "No Description"}</Description>
-          <WishList>
-            <WishlistWrapper>
-              <FavoriteBorderOutlined/>WISHLIST
-            </WishlistWrapper>
-          </WishList>
-          <Price>Rs. {price}</Price>
-        </Info>  
-      </Container>
-    
-  )
+    <Container>
+      <Link style={link} to={`/product/${_id}`}>
+        <Wrapper>
+          <Image src={img} />
+          {ratingsQuantity ? (
+            <RatingsContainer>
+              <Rating>
+                {ratingsAverage}{" "}
+                <StarIcon
+                  style={{ color: "rgb(125, 0, 171)", fontSize: "20px" }}
+                />
+              </Rating>
+              <div
+                style={{ borderLeft: "1px solid green", height: "15px" }}
+              ></div>
+              <RatingCount>{ratingsQuantity}</RatingCount>
+            </RatingsContainer>
+          ) : null}
+        </Wrapper>
+      </Link>
+      <Info>
+        <Title>{title}</Title>
+        {/* <Description>{desc?.length > 25 ? `${desc?.slice(0,24)}...` : desc}</Description> */}
+        <Description>{desc ? desc : "No Description"}</Description>
+        <WishList>
+          <WishlistWrapper>
+            <FavoriteBorderOutlined />
+            WISHLIST
+          </WishlistWrapper>
+        </WishList>
+        <Price>Rs. {price}</Price>
+      </Info>
+    </Container>
+  );
 }
 
-export default ProductItem
+export default ProductItem;

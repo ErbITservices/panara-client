@@ -3,6 +3,7 @@ import { Google } from '@mui/icons-material'
 import React from 'react'
 import styled from 'styled-components'
 import{mobile} from '../Responsive'
+import { Link } from 'react-router-dom'
 
 const Container = styled.div`
   display: flex;
@@ -112,28 +113,24 @@ function Footer() {
           <SocialContainer>
             <SocialIcons
               color="3b5998"
-              href="https://www.facebook.com/"
+              href="https://www.facebook.com/PANARAENTERPRISEPVTLTD/"
               target="_blank"
             >
               <Facebook />
             </SocialIcons>
             <SocialIcons
               color="bc2a8d"
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/panara_enterprise/"
               target="_blank"
             >
               <Instagram />
             </SocialIcons>
-            <SocialIcons
-              color="075e54"
-              href="https://www.whatsapp.com/"
-              target="_blank"
-            >
+            <SocialIcons color="075e54" href="9328938959" target="_blank">
               <WhatsApp />
             </SocialIcons>
             <SocialIcons
               color="4885ed"
-              href="https://www.google.com/"
+              href="https://www.google.com/search?q=Panara+Enterprise&stick=H4sIAAAAAAAA_-NgU1I1qDC2NE21MDa2MLBMBIEkK4OK5BTjJIOUVAPDNEPLZDMz40WsggGJeYlFiQqueSWpRQVFmcWpALyXqy09AAAA&hl=en-GB&mat=CYYX5mPWLFCuElYBEKoLaYt4EKypxMvfHJmKAN2jFAWtGn0xxLlNtwJFKIIWoLXt2IVSrlwjPFoL3pvPZESZc57VBAQneMmcEkdf0DlMwRJmDNvtLboYKU0q_9i4VuqcBA&authuser=0 "
               target="_blank"
             >
               <Google />
@@ -143,16 +140,24 @@ function Footer() {
         <Center>
           <Title>Useful Links</Title>
           <List>
-            <ListItem>Mouse & Key Board</ListItem>
-            <ListItem>Printer Material</ListItem>
-            <ListItem>Scanner</ListItem>
-            <ListItem>Login</ListItem>
-            <ListItem>Sign up</ListItem>
-            <ListItem>Wish list</ListItem>
-            <ListItem>Cart</ListItem>
-            <ListItem>Categorys</ListItem>
-            <ListItem>Terms</ListItem>
-            <ListItem>My Account</ListItem>
+            <Link to={"/products/MOUSE&KEYBORD"}>
+              <ListItem>Mouse & Key Board</ListItem>
+            </Link>
+            <Link to={"/products/SCANNER"}>
+              <ListItem>Scanner</ListItem>
+            </Link>
+            <Link to={"/products/PRINTER_MATERIAL"}>
+              <ListItem>Printer Material</ListItem>
+            </Link>
+            <Link to={"/ComplainRegister"}>
+              <ListItem> Register Complain </ListItem>
+            </Link>
+            <Link to={"/login"}>
+              <ListItem> Login</ListItem>
+            </Link>
+            <Link to={"/signup"}>
+              <ListItem> Signup</ListItem>
+            </Link>
           </List>
         </Center>
         <Right>
@@ -171,15 +176,18 @@ function Footer() {
           </ContectItem>
           <ContectItem>
             <Call />
-            +91 8160628914
+            +91 9328938959
+          </ContectItem>
+          <ContectItem>
+            <Call />
+            +91 07949231201
           </ContectItem>
           <ContectItem>
             <Email /> patelmihir2712005@gmail.com
           </ContectItem>
         </Right>
       </Container>
-        <Branding>Powered by ERBIT SERVICES </Branding>
-      
+      <Branding>Powered by ERBIT SERVICES </Branding>
     </Contain>
   );
 }

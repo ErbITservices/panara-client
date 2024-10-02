@@ -169,7 +169,7 @@ const Dropdown = styled.span`
   gap: 5px;
   &:hover {
     color: black;
-    font-weight: 600;
+    font-weight: 500;
   }
 `;
 const AccountContainer = styled.div`
@@ -187,7 +187,7 @@ const Hello = styled.span`
   font-weight: 400;
 `;
 const Account = styled.span`
-  font-weight: 600;
+  font-weight: 400;
   position: relative;
   display: flex;
   align-items: center;
