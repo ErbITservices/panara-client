@@ -32,6 +32,7 @@ function ComplainRegister() {
   
 
   const [library, setlibrary] = useState({
+    region:"",
     lname: "",
     service: "",
     problemstatement: "",
@@ -119,16 +120,22 @@ function ComplainRegister() {
     }}
     
   };
-  const handlecheck = async () => {
-    console.log(library);
-    const allcomplain = await userRequest.get(`/api/complain/${library.lname}`);
-    setcomplains(allcomplain.data);
+  async function getdata(){
+    const allcomplains = await userRequest.get(`/api/ticket/region/${library.region}`);
+    setcomplains(allcomplains.data);
+    console.log(allcomplains,'l');
+    console.log(`/api/ticket/region/${library.region}`);
     
     console.log(complains);
 
     if (complains) {
       setcomplainstaus(true);
     }
+  }
+  const handlecheck = async () => {
+    console.log(library);
+    const allcomplain = await userRequest.get(`/api/complain/${library.lname}`);
+    
     
     
   
@@ -192,7 +199,40 @@ function ComplainRegister() {
           <h1>Register Complain</h1>
           <h3 className="warnings">{status}</h3>
           <div className="inputfield">
+        <select 
+        name="region" 
+        onChange={ (e)=>{
+          getdata();
+          handleInput(e);
+        }}
+        value={library.region}
+        
+        required
+        type="text"
+        >
+          <option  >ahmedabad</option>
+          <option>Adl mehsana</option>
+          <option>Adl bhavnagar</option>
+          <option>Adl surat</option>
+          <option>Adl rajkot</option>
+          <option>Adl vadodra</option>
+          <option>Scl gandhinagar</option>
+          <option>Scl vadodra</option>
+        </select>
+          </div>
+          <div className="inputfield">
             <label>Enter Library Name </label>
+            <select 
+        name="region" 
+        onChange={handleInput}
+        value={library.lname}
+        required
+        type="text"
+        >
+          {/* {complains.map(i =>{
+
+          })} */}
+        </select>
             <input
               name="lname"
               onChange={handleInput}
@@ -211,6 +251,7 @@ function ComplainRegister() {
               type="text"
             />
           </div>
+          
           {Renew  && (
             <>
               <h3>You Want Paid Visit</h3>
