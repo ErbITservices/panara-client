@@ -29,6 +29,8 @@ function ComplainRegister() {
   const [status, setstatus] = useState("");
   const [complains, setcomplains] = useState(null);
   const [complainstaus, setcomplainstaus] = useState(false);
+  const [getdatastatus, setgetdatastatus] = useState(false);
+  const [lnamelist, setlnamelist] = useState();
   
 
   const [library, setlibrary] = useState({
@@ -46,7 +48,7 @@ function ComplainRegister() {
     const [Renew, setRenew] = useState(false);
     const [Renewcomplains, setRenewcomplains] = useState(false);
 
-  const handleInput = (e) => {
+  const handleInput =async (e) => {
     const name = e.target.name;
     const value = e.target.value;
 
@@ -61,6 +63,19 @@ function ComplainRegister() {
       filereader.onload = () => {
         console.log("image changed on " )
         setlibrary((p) => ({ ...p, img: filereader.result }));
+      }
+    }
+    if (name === "region") {
+      console.log(e.target.value);
+      console.log(`/api/ticket/region/${e.target.value}`);
+    
+      const allcomplains = await userRequest.get(`/api/ticket/region/${e.target.value}`);
+      setlnamelist(allcomplains.data);
+      console.log(lnamelist);
+      
+  
+      if (allcomplains.data) {
+        setgetdatastatus(true);
       }
     }
     console.log(library);
@@ -120,17 +135,8 @@ function ComplainRegister() {
     }}
     
   };
-  async function getdata(){
-    const allcomplains = await userRequest.get(`/api/ticket/region/${library.region}`);
-    setcomplains(allcomplains.data);
-    console.log(allcomplains,'l');
-    console.log(`/api/ticket/region/${library.region}`);
-    
-    console.log(complains);
-
-    if (complains) {
-      setcomplainstaus(true);
-    }
+  async function getdata(e){
+   
   }
   const handlecheck = async () => {
     console.log(library);
@@ -199,10 +205,12 @@ function ComplainRegister() {
           <h1>Register Complain</h1>
           <h3 className="warnings">{status}</h3>
           <div className="inputfield">
+            
+          <label> Region </label>
         <select 
         name="region" 
         onChange={ (e)=>{
-          getdata();
+          getdata(e);
           handleInput(e);
         }}
         value={library.region}
@@ -210,7 +218,8 @@ function ComplainRegister() {
         required
         type="text"
         >
-          <option  >ahmedabad</option>
+          <option>Select</option>
+          <option>Adl ahmedabad</option>
           <option>Adl mehsana</option>
           <option>Adl bhavnagar</option>
           <option>Adl surat</option>
@@ -219,27 +228,26 @@ function ComplainRegister() {
           <option>Scl gandhinagar</option>
           <option>Scl vadodra</option>
         </select>
+        
           </div>
           <div className="inputfield">
-            <label>Enter Library Name </label>
+            <label> Library Name </label>
+            
             <select 
-        name="region" 
+        name="lname"
         onChange={handleInput}
         value={library.lname}
         required
         type="text"
         >
-          {/* {complains.map(i =>{
-
-          })} */}
+          
+          <option>Select</option>
+          {getdatastatus && lnamelist.map(i =>(
+             
+              
+          <option>{i.lname}</option>
+          ))}
         </select>
-            <input
-              name="lname"
-              onChange={handleInput}
-              value={library.lname}
-              required
-              type="text"
-            />
           </div>
           <div className="inputfield">
             <label>Enter Service name </label>

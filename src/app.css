@@ -334,6 +334,15 @@
   background: transparent;
   font-size: 20px;
 }
+.inputfield select {
+  border-radius: 3px;
+  border: 1.5px solid black;
+  padding: 8px;
+  border-radius: 10px;
+  width: 20%;
+  background: transparent;
+  font-size: 20px;
+}
 .inputfield label {
   padding: 5px 10px;
   font-weight: 500;
