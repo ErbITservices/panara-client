@@ -516,7 +516,6 @@ background: rgb(255, 68, 68) !important;
     flex: 0 0 100%;
     max-width: 45%;
     height: 38vh;
-    animation: appear2 0.3s linear;
     animation-timeline: view();
     animation-range: entry 0% cover 40% ;
   }
@@ -558,7 +557,6 @@ background: rgb(255, 68, 68) !important;
     margin: 0;
     padding: 10px 0px;
     margin: 10px 0px;
-    animation: appear2 0.3s linear;
     animation-timeline: view();
     animation-range: entry 0% cover 40% ;
   }
