@@ -125,6 +125,7 @@ const Logo = styled.div`
     fontSize: "1.5rem",
     height: "50px",
   width: "90px",
+  margin:"-20px"
   })}
 `;
 
