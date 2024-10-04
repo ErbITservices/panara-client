@@ -93,7 +93,7 @@ function ComplainRegister() {
         // setcheck("true")
         console.log("done");
         setstatus("Complain Submited");
-        setcheck("false");
+        setcheck("true");
         setlibrary({
           lname: "",
           service: "",
@@ -183,7 +183,7 @@ function ComplainRegister() {
         setstatus("Your Amc End-Date is " + res.data.enddate);
         
       } else {
-        setstatus("Sorry Your Amc is Expired Please Renew it Now");
+        setstatus("Sorry Your Amc is Expired or You are Not Register Please Book Paid visit Now");
         setRenew(true)
         setcheck( "true")
       }
