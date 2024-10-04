@@ -108,7 +108,8 @@ function Footer() {
           <Description>
             We are Panara Enterprise Pvt LTD and our company has successfully
             completed many projects with Our Government Of India and also we
-            have worked with our State Go...
+            have worked with our State Government.
+            We are one of the leading ITService company in gujarat. we have many clients in all over India.
           </Description>
           <SocialContainer>
             <SocialIcons
@@ -183,7 +184,7 @@ function Footer() {
             +91 07949231201
           </ContectItem>
           <ContectItem>
-            <Email /> patelmihir2712005@gmail.com
+            <Email /> panaraenterprise.pvt.ltd@gmail.com
           </ContectItem>
         </Right>
       </Container>

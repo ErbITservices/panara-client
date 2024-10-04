@@ -250,6 +250,19 @@ function ComplainRegister() {
         </select>
           </div>
           <div className="inputfield">
+            <label>If Library Not Register Enter Name </label>
+            
+            <input
+              name="lname"
+              onChange={handleInput}
+              value={library.lname}
+              required
+              type="text"
+            />
+          
+          
+          </div>
+          <div className="inputfield">
             <label>Enter Service name </label>
             <input
               name="service"
