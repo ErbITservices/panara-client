@@ -100,6 +100,7 @@
   word-spacing: 5px;
   animation: appear 1s linear;
   transition: all ease 1s;
+  word-wrap: break-word;
 }
 
 .image {
@@ -320,24 +321,39 @@
 
 .inputfield {
   margin: 10px 0px;
-  text-align: center;
+  text-align: start;
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  padding: 0px 50px;
 }
+
 .inputfield input {
   border-radius: 3px;
   border: 1.5px solid black;
   padding: 8px;
   border-radius: 10px;
-  width: 20%;
+  width: 50%;
+  max-width: 300px;
   background: transparent;
   font-size: 20px;
+}
+.inputfield select {
+  border-radius: 3px;
+  border: 1.5px solid black;
+  padding: 8px;
+  border-radius: 10px;
+  width: 50%;
+  background: transparent;
+  font-size: 20px;
+  max-width: 300px;
 }
 .inputfield label {
   padding: 5px 10px;
   font-weight: 500;
   font-size: 25px;
+  
+  width: 30%;
 }
 
 /*choose us*/
@@ -574,7 +590,6 @@ box-shadow: 0 8px 32px 0 rgba(26, 32, 118, 0.656);
     flex: 0 0 100%;
     max-width: 100%;
     height: 38vh;
-    animation: appear2 0.3s linear;
     animation-timeline: view();
     animation-range: entry 0% cover 40% ;
   }
@@ -616,7 +631,6 @@ box-shadow: 0 8px 32px 0 rgba(26, 32, 118, 0.656);
     margin: 0;
     padding: 10px 0px;
     margin: 10px 0px;
-    animation: appear2 0.3s linear;
     animation-timeline: view();
     animation-range: entry 0% cover 40% ;
   }
@@ -650,6 +664,7 @@ box-shadow: 0 8px 32px 0 rgba(26, 32, 118, 0.656);
     box-shadow: 0 8px 32px 0 rgb(32, 35, 69);
     transform: scale(1.05);
   }
+<<<<<<< HEAD
   .icard{
     flex-direction: column;
     width: 90%;
@@ -665,5 +680,21 @@ box-shadow: 0 8px 32px 0 rgba(26, 32, 118, 0.656);
   }
   .heading{
     display: none;
+=======
+  .inputfield{
+    display: block;
+  }
+  .inputfield label{
+    width: 100%;
+    margin: 10px;
+  }
+  .inputfield input{
+    width: 80%;
+    margin: 10px;
+  }
+  .inputfield select{
+    width: 90%;
+    margin: 10px;
+>>>>>>> 174ea7eb86a0ec1b5ba682f44d7adc408dd542b2
   }
 }

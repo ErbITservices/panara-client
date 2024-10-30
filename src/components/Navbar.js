@@ -123,6 +123,9 @@ const Logo = styled.div`
   ${mobile({
     textAlign: "start",
     fontSize: "1.5rem",
+    height: "50px",
+  width: "90px",
+  margin:"-20px"
   })}
 `;
 
@@ -256,11 +259,12 @@ function Navbar() {
   return (
     <Container>
       <Wrapper>
-        <Left>
-          <Logo
+      <Logo
             onClick={() => redirect("/")}
             style={{ backgroundImage: `url(${logo})` }}
           ></Logo>
+        <Left>
+          
 
           <Link to="/" className="highlight">
             About US

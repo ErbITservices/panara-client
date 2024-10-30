@@ -29,22 +29,26 @@ function ComplainRegister() {
   const [status, setstatus] = useState("");
   const [complains, setcomplains] = useState(null);
   const [complainstaus, setcomplainstaus] = useState(false);
+  const [getdatastatus, setgetdatastatus] = useState(false);
+  const [lnamelist, setlnamelist] = useState();
+  
 
   const [library, setlibrary] = useState({
+    region:"",
     lname: "",
     service: "",
     problemstatement: "",
     img: "",
-    mobilenumber: "",
-    email: "",
+      mobilenumber: "",
+    email:"",
     name: "",
-    status: "pending",
+    status:"pending"
   });
-  const [check, setcheck] = useState("false");
-  const [Renew, setRenew] = useState(false);
-  const [Renewcomplains, setRenewcomplains] = useState(false);
+    const [check, setcheck] = useState("false");
+    const [Renew, setRenew] = useState(false);
+    const [Renewcomplains, setRenewcomplains] = useState(false);
 
-  const handleInput = (e) => {
+  const handleInput =async (e) => {
     const name = e.target.name;
     const value = e.target.value;
 
@@ -57,9 +61,22 @@ function ComplainRegister() {
       const filereader = new FileReader();
       filereader.readAsDataURL(file);
       filereader.onload = () => {
-        console.log("image changed on ");
+        console.log("image changed on " )
         setlibrary((p) => ({ ...p, img: filereader.result }));
-      };
+      }
+    }
+    if (name === "region") {
+      console.log(e.target.value);
+      console.log(`/api/ticket/region/${e.target.value}`);
+    
+      const allcomplains = await userRequest.get(`/api/ticket/region/${e.target.value}`);
+      setlnamelist(allcomplains.data);
+      console.log(lnamelist);
+      
+  
+      if (allcomplains.data) {
+        setgetdatastatus(true);
+      }
     }
     console.log(library);
   };
@@ -76,7 +93,7 @@ function ComplainRegister() {
         // setcheck("true")
         console.log("done");
         setstatus("Complain Submited");
-        setcheck("false");
+        setcheck("true");
         setlibrary({
           lname: "",
           service: "",
@@ -86,53 +103,53 @@ function ComplainRegister() {
           email: "",
           name: "",
         });
-        setRenew(false);
-        setcomplainstaus(false);
-      } catch (error) {
-        setstatus("Sorry Try Again!");
-        console.log(error);
-      }
-    } else {
-      try {
-        console.log("mihir1");
-        const res = await userRequest.post("/api/complain", {
-          library,
-        });
-        // setcheck("true")
-        console.log("done");
-        setstatus("Complain Submited");
-        setcheck("false");
-        setlibrary({
-          lname: "",
-          service: "",
-          problemstatement: "",
-          img: "",
-          mobilenumber: "",
-          email: "",
-          name: "",
-        });
+        setRenew(false)
+        setcomplainstaus(false)
+        
       } catch (error) {
         setstatus("Sorry Try Again!");
         console.log(error);
       }
     }
+    else{try {
+      console.log("mihir1");
+      const res = await userRequest.post("/api/complain", {
+        library,
+      });
+      // setcheck("true")
+      console.log("done");
+      setstatus("Complain Submited");
+      setcheck("false");
+      setlibrary({
+        lname: "",
+        service: "",
+        problemstatement: "",
+        img: "",
+        mobilenumber: "",
+        email: "",
+        name: "",
+      });
+    } catch (error) {
+      setstatus("Sorry Try Again!");
+      console.log(error);
+    }}
+    
   };
+  async function getdata(e){
+   
+  }
   const handlecheck = async () => {
     console.log(library);
     const allcomplain = await userRequest.get(`/api/complain/${library.lname}`);
-    setcomplains(allcomplain.data);
-
-    console.log(complains);
-
-    if (complains) {
-      setcomplainstaus(true);
-    }
-
+    
+    
+    
+  
     try {
       console.log("mihir1");
       const res = await userRequest.get(`/api/ticket/${library.lname}`);
       console.log(res.data.enddate);
-
+      
       // Date object
       const date = new Date();
 
@@ -157,22 +174,25 @@ function ComplainRegister() {
 
       if (b >= a) {
         console.log("hello");
-
+        
         console.log("mihir " + complainstaus);
         setcheck("true");
-
+        
         setcomplainstaus(true);
-
+        
         setstatus("Your Amc End-Date is " + res.data.enddate);
+        
       } else {
-        setstatus("Sorry Your Amc is Expired Please Renew it Now");
-        setRenew(true);
-        setcheck("true");
+        setstatus("Sorry Your Amc is Expired or You are Not Register Please Book Paid visit Now");
+        setRenew(true)
+        setcheck( "true")
       }
       // setcheck("true")
     } catch (error) {
       console.log(error);
     }
+  
+    
   };
   return (
     <>
@@ -185,7 +205,53 @@ function ComplainRegister() {
           <h1>Register Complain</h1>
           <h3 className="warnings">{status}</h3>
           <div className="inputfield">
-            <label>Enter Library Name </label>
+            
+          <label> Region </label>
+        <select 
+        name="region" 
+        onChange={ (e)=>{
+          getdata(e);
+          handleInput(e);
+        }}
+        value={library.region}
+        
+        required
+        type="text"
+        >
+          <option>Select</option>
+          <option>Adl ahmedabad</option>
+          <option>Adl mehsana</option>
+          <option>Adl bhavnagar</option>
+          <option>Adl surat</option>
+          <option>Adl rajkot</option>
+          <option>Adl vadodra</option>
+          <option>Scl gandhinagar</option>
+          <option>Scl vadodra</option>
+        </select>
+        
+          </div>
+          <div className="inputfield">
+            <label> Library Name </label>
+            
+            <select 
+        name="lname"
+        onChange={handleInput}
+        value={library.lname}
+        required
+        type="text"
+        >
+          
+          <option>Select</option>
+          {getdatastatus && lnamelist.map(i =>(
+             
+              
+          <option>{i.lname}</option>
+          ))}
+        </select>
+          </div>
+          <div className="inputfield">
+            <label>If Library Not Register Enter Name </label>
+            
             <input
               name="lname"
               onChange={handleInput}
@@ -193,6 +259,8 @@ function ComplainRegister() {
               required
               type="text"
             />
+          
+          
           </div>
           <div className="inputfield">
             <label>Enter Service name </label>
@@ -204,16 +272,14 @@ function ComplainRegister() {
               type="text"
             />
           </div>
-          {Renew && (
+          
+          {Renew  && (
             <>
               <h3>You Want Paid Visit</h3>
               <div className="inputfield">
                 <button
                   type="button"
-                  onClick={() => {
-                    setcomplainstaus(true);
-                    setRenew(false);
-                  }}
+                  onClick={() => { setcomplainstaus(true); setRenew(false)}}
                   className="btn "
                 >
                   Continue
@@ -221,7 +287,7 @@ function ComplainRegister() {
               </div>
             </>
           )}
-          {complainstaus && (
+          { complainstaus && (
             <>
               <div className="inputfield">
                 <label>Enter Your Name </label>
@@ -263,17 +329,18 @@ function ComplainRegister() {
                   type="text"
                 />
               </div>
-
-              <div className="inputfield">
-                <label>Upload Photo Of Error </label>
-                <input
-                  accept="image/jpeg, image/png"
-                  name="image"
-                  onChange={handleInput}
-                  value={library.img}
-                  type="file"
-                />
-              </div>
+              
+                <div className="inputfield">
+                  <label>Upload Photo Of Error </label>
+                  <input
+                    accept="image/jpeg, image/png"
+                    name="image"
+                    onChange={handleInput}
+                    value={library.img}
+                    type="file"
+                  />
+                </div>
+             
 
               <div className="inputfield">
                 <button type="button" onClick={handleSubmit} className="btn ">
@@ -283,7 +350,7 @@ function ComplainRegister() {
             </>
           )}
 
-          {check === "false" && (
+          {  (check === "false") &&  (
             <div className="inputfield">
               <button type="button" onClick={handlecheck} className="btn ">
                 Check
