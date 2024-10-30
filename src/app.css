@@ -32,7 +32,7 @@
   text-shadow: 0 0 10px rgb(106, 0, 145);
 }
 .backimg {
-  background-size: contain;
+  background-size: cover;
   
 }
 .warnings {
@@ -369,6 +369,10 @@
   color: rgb(106, 0, 145);
   font-family: Arial, Helvetica, sans-serif;
 }
+.chooseus-containe p {
+  font-family: Arial, Helvetica, sans-serif;
+  width:auto;
+}
 .cursor {
   transition: all ease 0.1s;
   height: 20px;
@@ -407,6 +411,69 @@ background: rgb(255, 68, 68);
 }
 .react-multi-carousel-dot.react-multi-carousel-dot--active button{
 background: rgb(255, 68, 68) !important;
+}
+.infocards{
+  max-width: 100%;
+  text-align: center;
+  align-items: center;
+}
+.icard{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   height: 100%;
+  width: 97%;
+  margin: 10px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(9.5px);
+  -webkit-backdrop-filter: blur(9.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.icard:hover{
+  transition: all ease 0.5s;
+  scale: 1.01;
+box-shadow: 0 8px 32px 0 rgba(26, 32, 118, 0.656);
+}
+.cardimg{
+  width: 30%;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+.cardimg img{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.cardtext{
+  width: 70%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cardtext p{
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.3;
+  text-align: left;
+  padding: 0px 50px;
+  word-spacing: 5px;
+  transition: all ease 1s;
+}
+.heading{
+  font-size: 40px;
+  width:fit-content;
+  margin-bottom: 40px;
+  font-weight: 600;
+  font-family: cursive;
+  border-bottom: 3px solid black;
+  color: rgb(125, 0, 171);
 }
 
 
@@ -505,7 +572,7 @@ background: rgb(255, 68, 68) !important;
   }
   .service-item {
     flex: 0 0 100%;
-    max-width: 45%;
+    max-width: 100%;
     height: 38vh;
     animation: appear2 0.3s linear;
     animation-timeline: view();
@@ -582,5 +649,21 @@ background: rgb(255, 68, 68) !important;
     max-width: 100%;
     box-shadow: 0 8px 32px 0 rgb(32, 35, 69);
     transform: scale(1.05);
+  }
+  .icard{
+    flex-direction: column;
+    width: 90%;
+  }
+  .cardimg{
+    width: 97%;
+  }
+  .cardtext{
+    width: 100%;
+  }
+  .cardtext p{
+    padding: 5px;
+  }
+  .heading{
+    display: none;
   }
 }
