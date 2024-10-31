@@ -459,6 +459,7 @@ box-shadow: 0 8px 32px 0 rgba(26, 32, 118, 0.656);
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 10px;
+  background-position: center;
 }
 .cardimg img{
   width: 100%;
