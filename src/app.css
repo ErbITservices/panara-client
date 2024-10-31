@@ -647,7 +647,7 @@ box-shadow: 0 8px 32px 0 rgba(26, 32, 118, 0.656);
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 450px) {
   .cursor {
     display: none;
   }
