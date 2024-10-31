@@ -566,7 +566,7 @@ box-shadow: 0 8px 32px 0 rgba(26, 32, 118, 0.656);
     width: 97%;
   }
 }
-@media (max-width: 991px) {
+@media (max-width: 990px) {
   .cursor {
     display: none;
   }
@@ -646,7 +646,7 @@ box-shadow: 0 8px 32px 0 rgba(26, 32, 118, 0.656);
   }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 410px) {
   .cursor {
     display: none;
   }
