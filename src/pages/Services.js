@@ -44,6 +44,9 @@ function Services() {
               to building custom e-commerce and intranet experiences using the
               latest and proven web technologies.
             </p>
+            <Link to="/Contact">
+              <button className="btn">Get Started</button>
+            </Link>
           </div>
           <div className="service-item">
             <div
@@ -62,6 +65,9 @@ function Services() {
               Appnovation can also build cross-platform mobile applications that
               will work on any device or platform.
             </p>
+            <Link to="/Contact">
+              <button className="btn">Get Started</button>
+            </Link>
           </div>
           <div className="service-item">
             <div
@@ -81,6 +87,9 @@ function Services() {
               internal function of every business firms, organizations and
               service providers.
             </p>
+            <Link to="/Contact">
+              <button className="btn">Get Started</button>
+            </Link>
           </div>
           <div className="service-item">
             <div
@@ -99,6 +108,9 @@ function Services() {
               benefits of document scanning and offer tips for digitizing your
               hard copy records
             </p>
+            <Link to="/Contact">
+              <button className="btn">Get Started</button>
+            </Link>
           </div>
           <div className="service-item">
             <div
@@ -116,6 +128,9 @@ function Services() {
               service and maintenance. In specific industries, AMCs are
               certainly more prevalent than others.
             </p>
+            <Link to="/Contact">
+              <button className="btn">Get Started</button>
+            </Link>
           </div>
           <div className="service-item">
             <div
@@ -134,7 +149,7 @@ function Services() {
               library.
             </p>
             <Link to="/Contact">
-              <button>Get Started</button>
+              <button className="btn">Get Started</button>
             </Link>
           </div>
         </div>
