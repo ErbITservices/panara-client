@@ -161,21 +161,27 @@ function Aboutus() {
             <div className="icard">
               <div
                 className="cardimg"
-                style={{ backgroundImage: `url(${pic1})` }}
+                style={{ backgroundImage: `url(${pic4})` }}
               ></div>
               <div className="cardtext">
                 {/* <h3 className="heading">About</h3> */}
                 <p>
-                  At the inauguration of the Jamnagar Smart Library, the launch
-                  of e-books was conducted by Shri Rivaba Jadeja, Member of the
-                  Legislative Assembly, and Shri Poonamben Madam, Member of
-                  Parliament. This event highlighted the objectives of the Smart
-                  Library and emphasized the benefits of e-books, which cater to
-                  contemporary needs and support the youth in gaining more
-                  knowledge.
+                  The Shri Gandhi Library in Mansa, originally established by
+                  the esteemed grandfather of Honorable Home Minister Shri
+                  Arvindbhai Shah, has recently undergone a comprehensive
+                  renovation and modernization. This remarkable transformation,
+                  inaugurated by Honorable Home Minister of India, Shri Amitbhai
+                  Shah, brings new life to the library, enhancing its role as a
+                  beacon of knowledge and learning in the community. The updated
+                  facilities and welcoming environment now offer readers a
+                  vibrant space to explore books and ideas, promoting a renewed
+                  passion for literature and education. As a historic and
+                  educational landmark, the library continues to serve as a
+                  lasting legacy, inspiring future generations.
                 </p>
               </div>
             </div>
+
             <div className="icard">
               <div className="cardtext">
                 {/* <h3 className="heading">About</h3> */}
@@ -202,26 +208,22 @@ function Aboutus() {
             <div className="icard">
               <div
                 className="cardimg"
-                style={{ backgroundImage: `url(${pic4})` }}
+                style={{ backgroundImage: `url(${pic1})` }}
               ></div>
               <div className="cardtext">
                 {/* <h3 className="heading">About</h3> */}
                 <p>
-                  The Shri Gandhi Library in Mansa, originally established by
-                  the esteemed grandfather of Honorable Home Minister Shri
-                  Arvindbhai Shah, has recently undergone a comprehensive
-                  renovation and modernization. This remarkable transformation,
-                  inaugurated by Honorable Home Minister of India, Shri Amitbhai
-                  Shah, brings new life to the library, enhancing its role as a
-                  beacon of knowledge and learning in the community. The updated
-                  facilities and welcoming environment now offer readers a
-                  vibrant space to explore books and ideas, promoting a renewed
-                  passion for literature and education. As a historic and
-                  educational landmark, the library continues to serve as a
-                  lasting legacy, inspiring future generations.
+                  At the inauguration of the Jamnagar Smart Library, the launch
+                  of e-books was conducted by Shri Rivaba Jadeja, Member of the
+                  Legislative Assembly, and Shri Poonamben Madam, Member of
+                  Parliament. This event highlighted the objectives of the Smart
+                  Library and emphasized the benefits of e-books, which cater to
+                  contemporary needs and support the youth in gaining more
+                  knowledge.
                 </p>
               </div>
             </div>
+
             <div className="icard">
               <div className="cardtext">
                 {/* <h3 className="heading">About</h3> */}
