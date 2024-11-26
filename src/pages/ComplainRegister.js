@@ -66,19 +66,15 @@ function ComplainRegister() {
       }
     }
     if (name === "region") {
-      console.log(e.target.value);
-      console.log(`/api/ticket/region/${e.target.value}`);
     
       const allcomplains = await userRequest.get(`/api/ticket/region/${e.target.value}`);
       setlnamelist(allcomplains.data);
-      console.log(lnamelist);
       
   
       if (allcomplains.data) {
         setgetdatastatus(true);
       }
     }
-    console.log(library);
   };
 
   const handleSubmit = async () => {
@@ -330,7 +326,7 @@ function ComplainRegister() {
                   accept="image/jpeg, image/png"
                   name="image"
                   onChange={handleInput}
-                  value={library.img}
+                  // value={library.img}
                   type="file"
                 />
               </div>

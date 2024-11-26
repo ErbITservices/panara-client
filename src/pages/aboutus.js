@@ -285,6 +285,8 @@ function Aboutus() {
           </div>
         </section>
         <Certificateslider />
+
+        <NewsLetter />
         <Footer />
       </div>
     </>

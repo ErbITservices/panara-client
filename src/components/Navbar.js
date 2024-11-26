@@ -259,13 +259,11 @@ function Navbar() {
   return (
     <Container>
       <Wrapper>
-      <Logo
-            onClick={() => redirect("/")}
-            style={{ backgroundImage: `url(${logo})` }}
-          ></Logo>
+        <Logo
+          onClick={() => redirect("/")}
+          style={{ backgroundImage: `url(${logo})` }}
+        ></Logo>
         <Left>
-          
-
           <Link to="/" className="highlight">
             About US
           </Link>
@@ -274,6 +272,9 @@ function Navbar() {
           </Link>
           <Link to="/Home" className="highlight">
             Shop Now
+          </Link>
+          <Link to="/ComplainRegister" className="highlight">
+            Complain
           </Link>
         </Left>
         <Center>
