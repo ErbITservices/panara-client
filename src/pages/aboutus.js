@@ -10,6 +10,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Scale } from "@mui/icons-material";
 import Certificateslider from "../components/Certificateslider";
+import  NewsLetter  from "../components/NewsLetter";
 
 function Aboutus() {
   const [corsorx, setcorsorx] = useState();
