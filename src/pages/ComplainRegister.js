@@ -46,7 +46,6 @@ function ComplainRegister() {
   });
     const [check, setcheck] = useState("false");
     const [Renew, setRenew] = useState(false);
-    const [Renewcomplains, setRenewcomplains] = useState(false);
 
   const handleInput =async (e) => {
     const name = e.target.name;
@@ -116,6 +115,9 @@ function ComplainRegister() {
       console.log("done");
       setstatus("Complain Submited");
       setcheck("false");
+      setRenew(false)
+      setcheck(false)
+      setcomplainstaus(false)
       setlibrary({
         lname: "",
         service: "",
