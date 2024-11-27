@@ -274,7 +274,7 @@ function Navbar() {
             Shop Now
           </Link>
           <Link to="/ComplainRegister" className="highlight">
-            Complain
+            Register Complain 
           </Link>
         </Left>
         <Center>
