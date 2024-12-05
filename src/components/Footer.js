@@ -152,7 +152,7 @@ function Footer() {
               <ListItem> Register Complain </ListItem>
             </Link>
             <Link to={"/login"}>
-              <ListItem> Login  </ListItem>
+              <ListItem> Login - </ListItem>
               <br/>
             </Link>
             <Link to={"/signup"}>
