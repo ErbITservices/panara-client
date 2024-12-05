@@ -20,6 +20,7 @@ import logo from "../assets/logo.png";
 const link = {
   color: "black",
   textDecoration: "none",
+  margin : "0 20px"
     
 };
 const navoption = {
@@ -273,9 +274,6 @@ function Navbar() {
           <Link to="/Home" className="highlight">
             Shop Now
           </Link>
-          <Link to="/ComplainRegister" className="highlight">
-            Register Complain 
-          </Link>
         </Left>
         <Center>
           <SearchContainer>
@@ -300,6 +298,9 @@ function Navbar() {
           </SearchContainer>
         </Center>
         <Right>
+          <Link to="/ComplainRegister" style={link} className="highlight">
+            Register Complain
+          </Link>
           {!user ? (
             <>
               <MenueItem>

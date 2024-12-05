@@ -225,9 +225,8 @@ function Aboutus() {
               </div>
             </div>
 
-            <div className="icard">
+            {/* <div className="icard">
               <div className="cardtext">
-                {/* <h3 className="heading">About</h3> */}
                 <p>
                   The image captures the inauguration of a new library at Mansa,
                   attended by dignitaries, including Shri Pankaj Goswami,
@@ -247,7 +246,7 @@ function Aboutus() {
                 className="cardimg"
                 style={{ backgroundImage: `url(${pic3})` }}
               ></div>
-            </div>
+            </div> */}
           </div>
         </section>
 
