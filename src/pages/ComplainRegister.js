@@ -230,7 +230,11 @@ function ComplainRegister() {
 
             <select
               name="lname"
-              onChange={handleInput}
+              onChange={ (e) => {
+                handleInput(e)
+                setRenew(false)
+                setcheck("false")
+              }}
               value={library.lname}
               required
               type="text"
@@ -253,13 +257,17 @@ function ComplainRegister() {
           </div>
           <div className="inputfield">
             <label>Enter Service name </label>
-            <input
+            <select
               name="service"
               onChange={handleInput}
               value={library.service}
               required
               type="text"
-            />
+            >
+              <option>AMC</option>
+              <option>Data Entry</option>
+              <option>Other</option>
+            </select>
           </div>
 
           {Renew && (
