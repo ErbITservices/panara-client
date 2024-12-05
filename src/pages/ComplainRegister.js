@@ -265,6 +265,7 @@ function ComplainRegister() {
               required
               type="text"
             >
+              <option value={""}>Select</option>
               <option>AMC</option>
               <option>Data Entry</option>
               <option>Other</option>
