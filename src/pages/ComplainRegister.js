@@ -234,6 +234,7 @@ function ComplainRegister() {
               onChange={ (e) => {
                 handleInput(e)
                 setRenew(false)
+                setcomplainstaus(false)
                 setcheck("false")
               }}
               value={library.lname}
