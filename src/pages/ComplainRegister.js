@@ -139,7 +139,7 @@ function ComplainRegister() {
   const handlecheck = async () => {
     console.log(library);
     const allcomplain = await userRequest.get(`/api/complain/${library.lname}`);
-    // setcomplains(allcomplain)
+    setcomplains(allcomplain.data)
     console.log(allcomplain);
     
     
