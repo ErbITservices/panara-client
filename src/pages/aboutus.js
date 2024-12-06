@@ -210,8 +210,20 @@ function Aboutus() {
             <div className="icard">
               <div
                 className="cardimg"
-                style={{ backgroundImage: `url(${pic1})` }}
+                style={{ backgroundImage: `url(${pic6})` }}
               ></div>
+              <div className="cardtext">
+                <p>
+                  At the inauguration of the Jamnagar Smart Library, the launch
+                  of e-books was conducted by Shri Poonamben Madam, Member of
+                  Parliament. This event highlighted the objectives of the Smart
+                  Library and emphasized the benefits of e-books, which cater to
+                  contemporary needs and support the youth in
+                  gaining more knowledge.
+                </p>
+              </div>
+            </div>
+            <div className="icard">
               <div className="cardtext">
                 {/* <h3 className="heading">About</h3> */}
                 <p>
@@ -224,22 +236,9 @@ function Aboutus() {
                   knowledge.
                 </p>
               </div>
-            </div>
-
-            <div className="icard">
-              <div className="cardtext">
-                <p>
-                  At the inauguration of the Jamnagar Smart Library, the launch
-                  of e-books was conducted by Shri Poonamben Madam, Member of
-                  Parliament. This event highlighted the objectives of the Smart
-                  Library and emphasized the benefits of e-books, which cater to
-                  contemporary needs and support the youth in
-                  gaining more knowledge.
-                </p>
-              </div>
               <div
                 className="cardimg"
-                style={{ backgroundImage: `url(${pic6})` }}
+                style={{ backgroundImage: `url(${pic1})` }}
               ></div>
             </div>
           </div>
