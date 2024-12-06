@@ -195,7 +195,7 @@ function ComplainRegister() {
   };
   return (
     <>
-      <form
+      <div
         className="container"
         style={{ backgroundImage: `url(${mainbackground})` }}
       >
@@ -372,7 +372,7 @@ function ComplainRegister() {
         )}
 
         <Footer />
-      </form>
+      </div>
     </>
   );
 }

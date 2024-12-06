@@ -6,6 +6,7 @@ import pic1 from "../assets/pic1.jpg"
 import pic2 from "../assets/pic2.jpg"
 import pic3 from "../assets/pic3.jpg"
 import pic4 from "../assets/pic4.jpg"
+import pic6 from "../assets/pic6.jpg"
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Scale } from "@mui/icons-material";
@@ -225,28 +226,22 @@ function Aboutus() {
               </div>
             </div>
 
-            {/* <div className="icard">
+            <div className="icard">
               <div className="cardtext">
                 <p>
-                  The image captures the inauguration of a new library at Mansa,
-                  attended by dignitaries, including Shri Pankaj Goswami,
-                  Director of the Central Library, Gujarat. The space is
-                  beautifully decorated, with a ceremonial table adorned with
-                  garlands, flower petals, and a statue of Lord Ganesha,
-                  symbolizing auspicious beginnings. Books and resources are
-                  prominently displayed in the background, showcasing the
-                  library's collection. The Indian tricolor balloons add a
-                  patriotic touch, emphasizing cultural pride and the importance
-                  of knowledge. This opening marks a significant step toward
-                  promoting education and accessibility to information
-                  within the community.
+                  At the inauguration of the Jamnagar Smart Library, the launch
+                  of e-books was conducted by Shri Poonamben Madam, Member of
+                  Parliament. This event highlighted the objectives of the Smart
+                  Library and emphasized the benefits of e-books, which cater to
+                  contemporary needs and support the youth in
+                  gaining more knowledge.
                 </p>
               </div>
               <div
                 className="cardimg"
-                style={{ backgroundImage: `url(${pic3})` }}
+                style={{ backgroundImage: `url(${pic6})` }}
               ></div>
-            </div> */}
+            </div>
           </div>
         </section>
 
