@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-const BASE_URL = `${process.env.REACT_APP_BACKEND_API_BASE_URL}` || "http://localhost:4000";
+const BASE_URL = `https://panara-backend.vercel.app` || "http://localhost:4000";
 
 //const TOKEN = localStorage?.getItem("persist:root") && JSON.parse(JSON.parse(localStorage?.getItem("persist:root"))?.currentUser)?.accessToken;
 //in above line i have used optionl chaining and it makes code hard to read so i made a simpler function
