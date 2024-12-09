@@ -40,12 +40,12 @@ const Form = styled.form`
   // width: 100%;
   display: flex;
   flex-wrap: wrap;
-  background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(9.5px);
-  -webkit-backdrop-filter: blur(9.5px);
+  // background: rgba(255, 255, 255, 0.2);
+  // box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  // backdrop-filter: blur(9.5px);
+  // -webkit-backdrop-filter: blur(9.5px);
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  // border: 1px solid rgba(255, 255, 255, 0.18);
 `;
 
 const Input = styled.input`

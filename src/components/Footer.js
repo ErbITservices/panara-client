@@ -77,7 +77,7 @@ const Title = styled.h3`
   margin-bottom: 20px;
 `;
 const List = styled.ul`
-  margin: 0;
+  margin: 3px;
   padding: 0;
   list-style: none;
   display: flex;
