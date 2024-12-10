@@ -98,14 +98,17 @@ const ForgotPassword = () => {
       const { data } = await publicRequest.post("/api/auth/forgotpass", {
         email,
       });
-      console.log(data);
       console.log("hey");
 
       //checking if req was success
+      console.log(data);
+      
       if (data.sucess) {
         dispatch(setError(data.message));
       }
     } catch (error) {
+      console.log("ohh no");
+      
       dispatch(setError(error?.response?.data?.message));
     }
   };

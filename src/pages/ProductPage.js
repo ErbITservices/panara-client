@@ -366,7 +366,8 @@ function ProductPage(props) {
       description: `${product.desc.slice(0, 252)}...` || "random description", //slicing it because razor pay dosent allow desc length more then 255
       image: product.img,
       order_id: Dborder.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-      callback_url: "https://panara-backend.vercel.app/api/buy/paymentVerify",
+      callback_url:
+        "https://panara-backend-three.vercel.app/api/buy/paymentVerify",
       prefill: {
         name: `${user.firstName} ${user.lastName}`,
         email: user.email,
