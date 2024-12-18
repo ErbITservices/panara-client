@@ -178,8 +178,10 @@ function ComplainRegister() {
         setcheck("true");
         
         setcomplainstaus(true);
-        
-        setstatus("Your Amc End-Date is " + res.data.enddate);
+        if (res.data.enddate) {
+                  setstatus("Your Amc End-Date is " + res.data.enddate);
+
+        }
         
       } else {
         setstatus("Sorry Your Amc is Expired or You are Not Register Please Book Paid visit Now");
