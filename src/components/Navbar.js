@@ -202,6 +202,9 @@ const MenueItem = styled.div`
   cursor: pointer;
   margin-left: 25px;
   padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   ${mobile({
     marginLeft: "0.6rem",
   })}

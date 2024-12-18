@@ -16,6 +16,8 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  background-size: cover;
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
@@ -177,7 +179,10 @@ function SingUp(props) {
   return (
     <>
       <Navbar />
-      <Container style={{ backgroundImage: `url(${mainbackground})` }}>
+      <Container
+        classname="backimg"
+        style={{ backgroundImage: `url(${mainbackground})` }}
+      >
         {signupSuccess ? (
           <SignupSuccessDiv>Signup Successfull!</SignupSuccessDiv>
         ) : (

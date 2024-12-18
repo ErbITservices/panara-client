@@ -731,6 +731,8 @@
   }
   .cardimg {
     width: 97%;
+    
+  background-position: center;
   }
   .cardtext {
     width: 100%;
