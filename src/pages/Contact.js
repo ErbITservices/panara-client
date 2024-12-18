@@ -12,6 +12,7 @@ function Contact() {
     Email: "",
     Number: "",
     Descr: "",
+    Institute: "",
   });
   const handleinput = async (e) => {
     const name = e.target.name;
@@ -35,6 +36,7 @@ function Contact() {
         Email: "",
         Number: "",
         Descr: "",
+        Institute: "",
       });
     } catch (error) {
       console.log(error);
@@ -57,6 +59,17 @@ function Contact() {
               type="text"
               onChange={handleinput}
               value={data.Name}
+              required
+            ></input>
+          </div>
+          <div>
+            <label>Institute Name </label>
+            <input
+              label="Enter your name"
+              name="Name"
+              type="text"
+              onChange={handleinput}
+              value={data.Institute}
               required
             ></input>
           </div>

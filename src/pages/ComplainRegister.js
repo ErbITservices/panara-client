@@ -178,9 +178,8 @@ function ComplainRegister() {
         setcheck("true");
         
         setcomplainstaus(true);
-        if (res.data.enddate) {
+        if (res.data) {
                   setstatus("Your Amc End-Date is " + res.data.enddate);
-
         }
         
       } else {
