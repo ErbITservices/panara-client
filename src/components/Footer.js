@@ -80,14 +80,14 @@ const List = styled.ul`
   margin: 3px;
   padding: 0;
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
+  // display: flex;
+  // flex-wrap: wrap;
 `;
 const ListItem = styled.li`
   width: 100%;
   font-size: 15px;
-  margin : 8px ;
-  margin-bottom: 10px;
+  margin: 0 1vw ;
+  margin-bottom: 20px;
   color: #0039a6;
 `;
 const Right = styled.div`
@@ -143,29 +143,16 @@ function Footer() {
           <Title>Useful Links</Title>
           <List>
             <Link to={"https://dolib.gujarat.gov.in/index.htm"}>
-              <ListItem>Director Of Library </ListItem>
+              <ListItem>Director Of Library, Gujarat </ListItem>
             </Link>
-            <Link to={"/products/MOUSE&KEYBORD"}>
-              <ListItem>Mouse </ListItem>
+            <Link to={"https://www.rrrlf.gov.in/Default.aspx"}>
+              <ListItem>RRRLF, Kolkata </ListItem>
             </Link>
-            <Link to={"/products/MOUSE&KEYBORD"}>
-              <ListItem> Key Board</ListItem>
+            <Link to={"https://indcat.inflibnet.ac.in/"}>
+              <ListItem>Online Union Catalogue</ListItem>
             </Link>
-            <Link to={"/products/SCANNER"}>
-              <ListItem>Scanner</ListItem>
-            </Link>
-            <Link to={"/products/PRINTER_MATERIAL"}>
-              <ListItem>Printer Material</ListItem>
-            </Link>
-            <Link to={"/ComplainRegister"}>
-              <ListItem> Register Complain </ListItem>
-            </Link>
-            <Link to={"/login"}>
-              <ListItem> Login </ListItem>
-              <br />
-            </Link>
-            <Link to={"/signup"}>
-              <ListItem> Signup</ListItem>
+            <Link to={"https://www.oclc.org/en/home.html"}>
+              <ListItem>OCLC</ListItem>
             </Link>
           </List>
         </Center>
@@ -189,7 +176,7 @@ function Footer() {
           </ContactItem>
           <ContactItem>
             <Call />
-            +91 07949231201
+            +91 7949231201
           </ContactItem>
           <ContactItem>
             <Email /> panaraenterprise.pvt.ltd@gmail.com

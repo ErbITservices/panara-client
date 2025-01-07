@@ -18,9 +18,11 @@ import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import logo from "../assets/logo.png";
 
 const link = {
+  width: "max-content",
   color: "black",
   textDecoration: "none",
-  margin : "0 20px"
+  margin: "0 0.3vw",
+  
     
 };
 const navoption = {
