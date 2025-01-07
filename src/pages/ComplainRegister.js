@@ -225,18 +225,19 @@ function ComplainRegister() {
               <option>Adl vadodra</option>
               <option>Scl gandhinagar</option>
               <option>Scl vadodra</option>
+              <option>Other</option>
             </select>
           </div>
           <div className="inputfield">
-            <label> Library Name </label>
+            <label> Institute Name </label>
 
             <select
               name="lname"
-              onChange={ (e) => {
-                handleInput(e)
-                setRenew(false)
-                setcomplainstaus(false)
-                setcheck("false")
+              onChange={(e) => {
+                handleInput(e);
+                setRenew(false);
+                setcomplainstaus(false);
+                setcheck("false");
               }}
               value={library.lname}
               required
@@ -248,7 +249,7 @@ function ComplainRegister() {
             </select>
           </div>
           <div className="inputfield">
-            <label>If Library Not Register Enter Name </label>
+            <label>If Institute Not Register Enter Name </label>
 
             <input
               name="lname"
@@ -270,6 +271,11 @@ function ComplainRegister() {
               <option value={""}>Select</option>
               <option>AMC</option>
               <option>Data Entry</option>
+              <option>Web Development</option>
+              <option>App Development</option>
+              <option>UI/UX Designing</option>
+              <option>Digital Marketing</option>
+              <option>CCTV</option>
               <option>Other</option>
             </select>
           </div>
