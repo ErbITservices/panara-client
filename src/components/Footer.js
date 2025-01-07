@@ -84,8 +84,11 @@ const List = styled.ul`
   flex-wrap: wrap;
 `;
 const ListItem = styled.li`
-  width: 50%;
+  width: 100%;
+  font-size: 15px;
+  margin : 8px ;
   margin-bottom: 10px;
+  color: #0039a6;
 `;
 const Right = styled.div`
   flex: 1;
@@ -139,8 +142,14 @@ function Footer() {
         <Center>
           <Title>Useful Links</Title>
           <List>
+            <Link to={"https://dolib.gujarat.gov.in/index.htm"}>
+              <ListItem>Director Of Library </ListItem>
+            </Link>
             <Link to={"/products/MOUSE&KEYBORD"}>
-              <ListItem>Mouse & Key Board</ListItem>
+              <ListItem>Mouse </ListItem>
+            </Link>
+            <Link to={"/products/MOUSE&KEYBORD"}>
+              <ListItem> Key Board</ListItem>
             </Link>
             <Link to={"/products/SCANNER"}>
               <ListItem>Scanner</ListItem>
@@ -152,8 +161,8 @@ function Footer() {
               <ListItem> Register Complain </ListItem>
             </Link>
             <Link to={"/login"}>
-              <ListItem> Login - </ListItem>
-              <br/>
+              <ListItem> Login </ListItem>
+              <br />
             </Link>
             <Link to={"/signup"}>
               <ListItem> Signup</ListItem>

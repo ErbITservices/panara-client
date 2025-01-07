@@ -62,12 +62,12 @@ const Button = styled.button`
 
   border: none;
   flex: 1;
-  background-color: rgb(124, 0, 170);
-  color: black;
+  color: #fff;
+  background-color: #0039a6;
   cursor: pointer;
   &:hover {
     transform: scale(1);
-    background-color: rgb(106, 0, 145);
+    background-color: #0039a6;
   }
 `;
 
