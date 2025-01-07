@@ -87,7 +87,7 @@
   margin-bottom: 50px;
   font-weight: 700;
   padding: 30px 0px;
-  color: rgb(125, 0, 171);
+  color: #0039a6;
 }
 .info-container p {
   font-size: 20px;
@@ -493,7 +493,7 @@
   font-weight: 600;
   font-family: cursive;
   border-bottom: 3px solid black;
-  color: rgb(125, 0, 171);
+  color: #0039a6;
 }
 
 /* Contact form */

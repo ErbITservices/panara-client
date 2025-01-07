@@ -275,6 +275,9 @@ function ComplainRegister() {
               <option>App Development</option>
               <option>UI/UX Designing</option>
               <option>Digital Marketing</option>
+              <option>IT Consultancy</option>
+              <option>Server Installation</option>
+              <option>ManPower Services</option>
               <option>CCTV</option>
               <option>Other</option>
             </select>
