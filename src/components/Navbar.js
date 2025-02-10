@@ -273,9 +273,9 @@ function Navbar() {
           <Link to="/" className="highlight">
             About US
           </Link>
-          <Link to="/Services" className="highlight">
+          {/* <Link to="/Services" className="highlight">
             Our Services
-          </Link>
+          </Link> */}
           <Link to="/Home" className="highlight">
             Shop Now
           </Link>
