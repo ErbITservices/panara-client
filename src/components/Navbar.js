@@ -15,7 +15,7 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import LogoutIcon from "@mui/icons-material/Logout";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
-import logo from "../assets/logo.jpg";
+import logo from "../assets/logo.png";
 
 const link = {
   width: "max-content",
