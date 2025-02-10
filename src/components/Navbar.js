@@ -68,7 +68,7 @@ const SearchContainer = styled.div`
   height: 25px;
   position: relative;
   ${mobile({
-    marginLeft: "0px",
+    // marginLeft: "0px",
   })}
 `;
 
