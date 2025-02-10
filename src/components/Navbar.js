@@ -15,7 +15,7 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import LogoutIcon from "@mui/icons-material/Logout";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.jpg";
 
 const link = {
   width: "max-content",
@@ -115,19 +115,19 @@ const Center = styled.div`
   })}
 `;
 const Logo = styled.div`
-  height: 80px;
-  width: 110px;
+  height: 75px;
+  width: 100px;
 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin: 10px 10px;
+  margin: 5px 5px;
 
   ${mobile({
     textAlign: "start",
     fontSize: "1.5rem",
     height: "50px",
-  width: "90px",
+  width: "70px",
   margin:"-20px"
   })}
 `;

@@ -14,10 +14,11 @@ import { Link } from "react-router-dom";
 
 const Container = styled.div`
   display: flex;
-
+  width : 100%;
   height: fit-content;
   ${mobile({
     flexDirection: "column",
+    width : "100%",
   })}
 `;
 const Left = styled.div`

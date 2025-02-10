@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 import { Scale } from "@mui/icons-material";
 import Certificateslider from "../components/Certificateslider";
 import  NewsLetter  from "../components/NewsLetter";
+import Services from "./Services";
 
 function Aboutus() {
   const [corsorx, setcorsorx] = useState();
@@ -160,6 +161,8 @@ function Aboutus() {
 
         <section>
           <div className="infocards">
+            <h3 className="h3-heading ">Our Achivments</h3>
+
             <div className="icard">
               <div
                 className="cardimg"
@@ -278,6 +281,7 @@ function Aboutus() {
             </ul>
           </div>
         </section>
+        <Services></Services>
         <Certificateslider />
 
         <NewsLetter />

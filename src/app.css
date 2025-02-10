@@ -50,13 +50,13 @@
   border-radius: 20px;
   width: 50%;
   height: 100%;
-  margin: 8px;
+  margin: 50px 15px;
 }
 .info-container {
   height: 100%;
   width: 50%;
   background-color: #fff;
-  margin: 8px;
+  margin: 50px 15px;
   border-radius: 20px;
   /* box-shadow: 0px 0px 5px black; */
   text-align: center;
@@ -239,7 +239,7 @@
   height: 100%;
   min-height: 500px;
   padding: 30px 80px;
-  margin: 50px 100px;
+  margin: 50px 15px;
   text-align: center;
   background-color: transparent;
   align-items: center;
@@ -251,10 +251,11 @@
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
-.service-container h3 {
+.h3-heading {
   font-size: 5vh;
   margin-bottom: 25px;
 }
+
 
 .service-item {
   padding: 10px;
@@ -365,8 +366,8 @@
 
 .chooseus-containe {
   height: 100%;
-  width: 97%;
-  margin: 10px;
+  /* width: 100%; */
+  margin: 50px 15px;
   padding: 10px;
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -436,14 +437,16 @@
   max-width: 100%;
   text-align: center;
   align-items: center;
+    margin: 50px 15px;
+
 }
 .icard {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
-  width: 97%;
-  margin: 10px;
+  /* width: 98%; */
+  margin: 10px 0px;
   padding: 10px;
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -577,7 +580,7 @@
   .service-container {
     height: 100%;
     padding: 10px;
-    margin: 10px;
+      margin: 30px 10px;
   }
   .inputfield {
     padding: 10px;
@@ -594,6 +597,8 @@
   }
   .main-container {
     height: 850px;
+          /* margin: 30px 10px; */
+
   }
   .profile {
     height: 50%;
@@ -601,7 +606,9 @@
     display: block;
   }
   .chooseus-containe {
-    width: 97%;
+    /* width: 97%; */
+      margin: 30px 10px;
+
   }
 }
 @media (max-width: 991px) {
@@ -611,7 +618,7 @@
   .service-container {
     height: 100%;
     padding: 10px;
-    margin: 5px;
+      margin: 30px 10px;
   }
   .service-item:hover {
     transition: ease all 0.5s;
@@ -652,10 +659,12 @@
     display: block;
     padding: 0;
     height: 100%;
+          /* margin: 30px 10px; */
+
   }
   .info-container {
-    width: 96%;
-    margin: 20;
+    width: auto;
+      margin: 30px 10px;
     padding: 0;
     overflow: hidden;
   }
@@ -671,10 +680,11 @@
   .secound,
   .third,
   .fourth {
-    width: 95%;
+    width: -webkit-fill-available;
+    /* min-width: 95%; */
     margin: 0;
-    padding: 10px 0px;
-    margin: 10px 0px;
+    padding: 10px 10px;
+    margin: 10px 10px;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
   }
@@ -683,10 +693,14 @@
   .second-container {
     flex: 0 0 100%;
     max-width: 100%;
-    width: 98.7%;
+    width: auto;
+    margin: 30px 10px;
+
   }
   .chooseus-containe {
-    max-width: 92%;
+    /* max-width: 92%; */
+          margin: 30px 10px;
+
   }
   .conetctform input {
     width: 300px;
@@ -728,7 +742,8 @@
   }
   .icard {
     flex-direction: column;
-    width: 90%;
+    width: 95%;
+    padding: 5px;
   }
   .cardimg {
     width: 97%;
@@ -777,5 +792,10 @@
     padding: 8px;
     max-width: 800px;
     margin: 5px;
+  }
+  .highlight{
+        font-weight: 300;
+    font-size: 12px;
+    ;
   }
 }

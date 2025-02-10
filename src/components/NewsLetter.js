@@ -5,7 +5,7 @@ import { mobile } from "../Responsive";
 import { useNavigate } from "react-router-dom";
 
 const Container = styled.div`
-  height: 60vh;
+  height: 100%;
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(9.5px);
@@ -16,7 +16,8 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 10px 0px;
+  margin: 50px 15px;
+  padding: 50px 10px;
 `;
 const Title = styled.h1`
   font-size: 70px;

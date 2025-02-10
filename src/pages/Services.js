@@ -20,13 +20,14 @@ import { Link } from "react-router-dom";
 function Services() {
   return (
     <>
-      <div
+      {/* <div
         className="backimg"
         style={{ backgroundImage: `url(${mainbackground})` }}
-      >
-        <Navbar />
+      > */}
+      <div>
+        {/* <Navbar /> */}
         <div className="service-container">
-          <h3>Our Services</h3>
+          <h3 className="h3-heading ">Our Services</h3>
           <div className="service-item">
             <div
               className="servicecardpic"
@@ -153,7 +154,7 @@ function Services() {
             </Link>
           </div>
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );
