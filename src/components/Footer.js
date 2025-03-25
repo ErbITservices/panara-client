@@ -160,8 +160,8 @@ function Footer() {
         <Right>
           <Title>Contact Us</Title>
           <ContactItem>
-                
-            <Map /> Mihir Patel K, Upera,Unjha
+                Patel Mihirkumar Kamleshbhai 
+            <Map /> kotvadhomadh,Upera,Unjha
             
             <br />
             City: Unjha
