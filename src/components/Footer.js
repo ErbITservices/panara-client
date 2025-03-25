@@ -176,10 +176,7 @@ function Footer() {
             <Call />
             +91 8160628914
           </ContactItem>
-          // <ContactItem>
-          //   <Call />
-          //   +91 7949231201
-          // </ContactItem>
+          
           <ContactItem>
             <Email /> patelmihir2712005@gmail.com
           </ContactItem>
