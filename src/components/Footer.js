@@ -160,7 +160,7 @@ function Footer() {
         <Right>
           <Title>Contact Us</Title>
           <ContactItem>
-                MIHIRKUMAR KAMLESHBHAI PATEL 
+            Name :- MIHIRKUMAR KAMLESHBHAI PATEL 
                 <br />
             <Map /> kotvadho madh,Upera,Unjha, Mahesana
             
