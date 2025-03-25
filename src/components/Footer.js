@@ -160,13 +160,13 @@ function Footer() {
         <Right>
           <Title>Contact Us</Title>
           <ContactItem>
-                Patel Mihirkumar Kamleshbhai 
-            <Map /> kotvadhomadh,Upera,Unjha
+                MIHIRKUMAR KAMLESHBHAI PATEL 
+            <Map /> kotvadho madh,Upera,Unjha, Mahesana
             
             <br />
             City: Unjha
             <br />
-            State/province/area: GUJARAT
+            State/province/area: GUJARAT INDIA
             <br />
             Zip code 384170
             <br />
