@@ -160,27 +160,28 @@ function Footer() {
         <Right>
           <Title>Contact Us</Title>
           <ContactItem>
-            <Map /> 8, Third Floor, Sukh Sagar Complex, Near Kakdiya Hospital,
+                
+            <Map /> Mihir Patel K, Upera,Unjha
             Bapunagar
             <br />
-            City: AHMEDABAD
+            City: Unjha
             <br />
             State/province/area: GUJARAT
             <br />
-            Zip code 382350
+            Zip code 384170
             <br />
             Country India
           </ContactItem>
           <ContactItem>
             <Call />
-            +91 9328938959
+            +91 8160628914
           </ContactItem>
+          // <ContactItem>
+          //   <Call />
+          //   +91 7949231201
+          // </ContactItem>
           <ContactItem>
-            <Call />
-            +91 7949231201
-          </ContactItem>
-          <ContactItem>
-            <Email /> panaraenterprise.pvt.ltd@gmail.com
+            <Email /> patelmihir2712005@gmail.com
           </ContactItem>
         </Right>
       </Container>
