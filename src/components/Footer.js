@@ -116,24 +116,24 @@ function Footer() {
           <SocialContainer>
             <SocialIcons
               color="3b5998"
-              href="https://www.facebook.com/PANARAENTERPRISEPVTLTD/"
+              // href="https://www.facebook.com/PANARAENTERPRISEPVTLTD/"
               target="_blank"
             >
               <Facebook />
             </SocialIcons>
             <SocialIcons
               color="bc2a8d"
-              href="https://www.instagram.com/panara_enterprise/"
+              href="https://www.instagram.com/patelmihir_01/"
               target="_blank"
             >
               <Instagram />
             </SocialIcons>
-            <SocialIcons color="075e54" href="9328938959" target="_blank">
+            <SocialIcons color="075e54" href="8160628914" target="_blank">
               <WhatsApp />
             </SocialIcons>
             <SocialIcons
               color="4885ed"
-              href="https://www.google.com/search?q=Panara+Enterprise&stick=H4sIAAAAAAAA_-NgU1I1qDC2NE21MDa2MLBMBIEkK4OK5BTjJIOUVAPDNEPLZDMz40WsggGJeYlFiQqueSWpRQVFmcWpALyXqy09AAAA&hl=en-GB&mat=CYYX5mPWLFCuElYBEKoLaYt4EKypxMvfHJmKAN2jFAWtGn0xxLlNtwJFKIIWoLXt2IVSrlwjPFoL3pvPZESZc57VBAQneMmcEkdf0DlMwRJmDNvtLboYKU0q_9i4VuqcBA&authuser=0 "
+              // href="https://www.google.com/search?q=Panara+Enterprise&stick=H4sIAAAAAAAA_-NgU1I1qDC2NE21MDa2MLBMBIEkK4OK5BTjJIOUVAPDNEPLZDMz40WsggGJeYlFiQqueSWpRQVFmcWpALyXqy09AAAA&hl=en-GB&mat=CYYX5mPWLFCuElYBEKoLaYt4EKypxMvfHJmKAN2jFAWtGn0xxLlNtwJFKIIWoLXt2IVSrlwjPFoL3pvPZESZc57VBAQneMmcEkdf0DlMwRJmDNvtLboYKU0q_9i4VuqcBA&authuser=0 "
               target="_blank"
             >
               <Google />
