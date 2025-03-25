@@ -162,7 +162,7 @@ function Footer() {
           <ContactItem>
                 
             <Map /> Mihir Patel K, Upera,Unjha
-            Bapunagar
+            
             <br />
             City: Unjha
             <br />
