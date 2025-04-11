@@ -116,24 +116,24 @@ function Footer() {
           <SocialContainer>
             <SocialIcons
               color="3b5998"
-              // href="https://www.facebook.com/PANARAENTERPRISEPVTLTD/"
+              href="https://www.facebook.com/PANARAENTERPRISEPVTLTD/"
               target="_blank"
             >
               <Facebook />
             </SocialIcons>
             <SocialIcons
               color="bc2a8d"
-              href="https://www.instagram.com/patelmihir_01/"
+              href="https://www.instagram.com/panara_enterprise/"
               target="_blank"
             >
               <Instagram />
             </SocialIcons>
-            <SocialIcons color="075e54" href="8160628914" target="_blank">
+            <SocialIcons color="075e54" href="9328938959" target="_blank">
               <WhatsApp />
             </SocialIcons>
             <SocialIcons
               color="4885ed"
-              // href="https://www.google.com/search?q=Panara+Enterprise&stick=H4sIAAAAAAAA_-NgU1I1qDC2NE21MDa2MLBMBIEkK4OK5BTjJIOUVAPDNEPLZDMz40WsggGJeYlFiQqueSWpRQVFmcWpALyXqy09AAAA&hl=en-GB&mat=CYYX5mPWLFCuElYBEKoLaYt4EKypxMvfHJmKAN2jFAWtGn0xxLlNtwJFKIIWoLXt2IVSrlwjPFoL3pvPZESZc57VBAQneMmcEkdf0DlMwRJmDNvtLboYKU0q_9i4VuqcBA&authuser=0 "
+              href="https://www.google.com/search?q=Panara+Enterprise&stick=H4sIAAAAAAAA_-NgU1I1qDC2NE21MDa2MLBMBIEkK4OK5BTjJIOUVAPDNEPLZDMz40WsggGJeYlFiQqueSWpRQVFmcWpALyXqy09AAAA&hl=en-GB&mat=CYYX5mPWLFCuElYBEKoLaYt4EKypxMvfHJmKAN2jFAWtGn0xxLlNtwJFKIIWoLXt2IVSrlwjPFoL3pvPZESZc57VBAQneMmcEkdf0DlMwRJmDNvtLboYKU0q_9i4VuqcBA&authuser=0 "
               target="_blank"
             >
               <Google />
@@ -160,28 +160,32 @@ function Footer() {
         <Right>
           <Title>Contact Us</Title>
           <ContactItem>
-            
-            <Map />
-            Name :- MIHIRKUMAR KAMLESHBHAI PATEL 
-                <br />
-                 kotvadho madh,Upera,Unjha, Mahesana
-            
+            <Map /> 8, Third Floor, Sukh Sagar Complex, Near Kakdiya Hospital, 1Has a conversation.
+
+            Bapunagar
             <br />
-            City: Unjha
+            City: AHMEDABAD
             <br />
-            State/province/area: GUJARAT INDIA
+            State/province/area: GUJARAT
             <br />
-            Zip code 384170
+            Zip code 382350
             <br />
             Country India
           </ContactItem>
           <ContactItem>
             <Call />
-            +91 8160628914
+            +91 9328938959
           </ContactItem>
-          
+
+
+
+
           <ContactItem>
-            <Email /> patelmihir2712005@gmail.com
+            <Call />
+            +91 7949231201
+          </ContactItem>
+          <ContactItem>
+            <Email /> panaraenterprise.pvt.ltd@gmail.com
           </ContactItem>
         </Right>
       </Container>
