@@ -25,17 +25,29 @@
 ## 📁 Project Structure
 
 panara-client/
+
 ├── build/ # Production build files
+
 ├── node_modules/ # Project dependencies
+
 ├── public/ # Static assets
+
 ├── src/ # Source code
+
 │ ├── components/ # Reusable components
+
 │ ├── pages/ # Application pages
+
 │ ├── App.js # Root component
+
 │ └── index.js # Entry point
+
 ├── .env # Environment variables
+
 ├── .gitignore # Git ignore rules
+
 ├── package.json # Project metadata and scripts
+
 └── README.md # Project documentation
 
 ---
@@ -63,3 +75,13 @@ panara-client/
    ```bash
    http://localhost:3000/
    ```
+
+## 👥 Contributors
+ PATELMIHIR2715
+
+## 🤝 Contributing
+ We welcome contributions! Please open issues or pull requests to help improve this project.
+
+
+## 🌐 Live Demo
+  https://panarait.in/
