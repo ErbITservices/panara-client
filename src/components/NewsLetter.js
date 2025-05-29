@@ -77,7 +77,7 @@ function NewsLetter() {
     <Container>
       <Title>Register Your Complains Here</Title>
       <Description>
-        and feel free our support team Contact you in few days
+        And Feel Free Our Support Team Contact You As Possible As Soon
       </Description>
       <InputContainer>
         <Button onClick={() => navigator("/ComplainRegister")}>
