@@ -82,6 +82,13 @@ panara-client/
 ## 🤝 Contributing
  We welcome contributions! Please open issues or pull requests to help improve this project.
 
+## 📷 Screen Shots
+
+![Dashboard ](https://github.com/ErbITservices/panara-client/blob/f238ca2b40bed122643132bd8160d1112516a132/Screenshot/Screenshot%20(1).png)
+![Dashboard ](https://github.com/ErbITservices/panara-client/blob/f238ca2b40bed122643132bd8160d1112516a132/Screenshot/Screenshot%20(2).png)
+![Dashboard ](https://github.com/ErbITservices/panara-client/blob/f238ca2b40bed122643132bd8160d1112516a132/Screenshot/Screenshot%20(3).png)
+![Dashboard ](https://github.com/ErbITservices/panara-client/blob/f238ca2b40bed122643132bd8160d1112516a132/Screenshot/Screenshot%20(4).png)
+
 
 ## 🌐 Live Demo
   https://panarait.in/
